@@ -8,11 +8,11 @@ For this project there are 40 features or functionality to build. To pass this p
 
 ## Overview
 
-- Using a mono-repo template repository, create a full-stack web application
+- Using the [snack-a-log-frontend](https://github.com/9-1-pursuit/project-snack-a-log-frontend) and [snack-a-log-backend](https://github.com/9-1-pursuit/project-snack-a-log-backend) repos, create a full-stack web application
 - Use express to build a full CRUD back-end application that adheres to RESTful routes
-- Use create-react-app to build a full CRUD front-end application that interacts with the back-end
-- Use unit tests to guide the building process
-- Deploy the applications online, so anyone can see them online
+- Use [snack-a-log-frontend](https://github.com/9-1-pursuit/project-snack-a-log-frontend) to build a full CRUD front-end application that interacts with the back-end
+- Use backend unit tests to guide the building process
+- Deploy the applications separately, so anyone can see them online
 
 ## User Stories, Acceptance Criteria and Code Quality Rubric
 
@@ -67,7 +67,7 @@ Total: 21 tests
 1. Delete button
    1. Can delete a snack using the app
 
-Total: 17 tests
+\*\* There are no Front-end Tests
 
 Additional points:
 
@@ -78,7 +78,12 @@ Grand total: 40 points
 
 ## Getting Started
 
-1. Fork and clone this repository.
+1. Create a directory called `project-snack-a-log`
+1. `cd` into the directory
+1. Fork and clone the [snack-a-log-backend](https://github.com/9-1-pursuit/project-snack-a-log-backend) repo into your `project-snack-a-log` directory
+1. Fork and clone the [snack-a-log-frontend](https://github.com/9-1-pursuit/project-snack-a-log-frontend) repo into your `project-snack-a-log` directory
+1. Change the name of your `snack-a-log-backend` directory to `back-end`
+1. Change the name of your `snack-a-log-frontend` to `front-end`
 
 ### Back-end setup
 
@@ -119,10 +124,6 @@ REACT_APP_API_URL=http://localhost:3333
 - `npm install` - install npm packages listed in `package.json`
 - `npm start` - make sure your React app can start
 
-Keep the React app running, open a new tab and run
-
-- `npm test` - to open Cypress and run front-end tests
-
 ## Screenshots
 
 ### Index page
@@ -143,4 +144,15 @@ Keep the React app running, open a new tab and run
 
 ## Resources
 
-This project uses [this template](https://github.com/joinpursuit/pern-final-project-template) - you can follow the readme to set up deployment.
+Use the resources below to deploy your application
+
+### Backend Deployment
+
+[Render.com Deployment Instructions](https://github.com/9-1-pursuit/guide-deployment/tree/main/render-express-postgres)
+[Render.com Deployment Video Part 1, ExpressJS](https://drive.google.com/drive/u/1/my-drive)
+[Render.com Deployment Video Part 2, Postgresql](https://tobecreated)
+
+### Frontend Deployement
+
+[Netlify Deployment Instructions](https://github.com/9-1-pursuit/guide-deployment/tree/main/netlify-create-react-app)
+[Netlify Deployment Video](https://drive.google.com/drive/u/1/my-drive)
