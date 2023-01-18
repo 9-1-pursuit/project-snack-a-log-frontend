@@ -44,8 +44,6 @@ It would be best if you began with the back-end setup and then moved on to setti
 1. Delete button
 1. Can delete a snack using the app
 
-> **Total**: 17 tests
-
 > **Note**: There are no front-end tests; your hosted application's functionality and code quality will be used to evaluate you.
 
 ### Additional points:
