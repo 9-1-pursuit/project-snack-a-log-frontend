@@ -58,7 +58,7 @@ It would be best if you began with the back-end setup and then moved on to setti
 
 1. Navigate to your directory called `project-snack-a-log`.
 1. `cd` into the directory.
-1. Fork and clone the `project-snack-a-log-front-end` repo into your `project-snack-a-log` directory.
+1. Fork and clone the [`project-snack-a-log-front-end`](https://github.com/9-1-pursuit/project-snack-a-log-frontend) repo into your `project-snack-a-log` directory.
 1. Change the name of your `project-snack-a-log-front-end` directory to `front-end`.
 
 > **Note**: Your `back-end` directory should be adjacent to your `front-end` directory. Both should be their own git repositories. The top-level `project-snack-a-log` folder should **NOT** be a git repository.
