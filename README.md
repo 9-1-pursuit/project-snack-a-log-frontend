@@ -43,15 +43,16 @@ It would be best if you began with the back-end setup and then moved on to setti
 1. Can update a snack and then redirects back to the index page
 1. Delete button
 1. Can delete a snack using the app
+1. Front-end hosted and accessible online
+
+> **Total**: 23 points
 
 > **Note**: There are no front-end tests; your hosted application's functionality and code quality will be used to evaluate you.
 
 ### Additional points:
-
-- Front-end hosted and accessible online: 1 point
 - Completed back-end (see project-snack-a-log-front-end for more details)
 
-> **Grand total**: 40 points
+> **Grand total**: 45 points
 
 ## Getting Started
 
