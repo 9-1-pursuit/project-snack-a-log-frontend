@@ -8,7 +8,7 @@ For this project, there are 40 features or functionality to build. You are requi
 
 ## Overview
 
-- Using the `project-snack-a-log-frontend` and `project-snack-a-log-backend` repos (links available through Canvas), create a full-stack web application by building the two applications and having them interact.
+- Using the [`project-snack-a-log-frontend`](https://github.com/9-1-pursuit/project-snack-a-log-frontend) and [`project-snack-a-log-backend`](https://github.com/9-1-pursuit/project-snack-a-log-backend) repos, create a full-stack web application by building the two applications and having them interact.
 - Use Express to build a complete CRUD back-end application that adheres to RESTful routes.
 - Use back-end unit tests to guide the building process.
 - Deploy the applications separately so that anyone can see them online and the two online applications can interact.
@@ -50,7 +50,7 @@ It would be best if you began with the back-end setup and then moved on to setti
 > **Note**: There are no front-end tests; your hosted application's functionality and code quality will be used to evaluate you.
 
 ### Additional points:
-- Completed back-end (see project-snack-a-log-front-end for more details)
+- Completed front-end (see [project-snack-a-log-back-end](https://github.com/9-1-pursuit/project-snack-a-log-backend) for more details)
 
 > **Grand total**: 45 points
 
