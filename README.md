@@ -62,7 +62,7 @@ It might be a good idea if you begin with the back-end setup and then move on to
 #### Presentation
 1. You will present as a group your application to the class. Each team member must participate (1 pt)
 
-> **Points**
+> **Point Structure**<br />
 > **Total Frontend**: 23 points<br />
 > **Total Backend**: 21 points<br />
 > **Presentation**: 1 point
