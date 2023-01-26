@@ -35,7 +35,6 @@ It might be a good idea if you begin with the back-end setup and then move on to
 
 ### Front-end
 
-1. Index page
 1. It Can load the index page and has navigation to the New page
 1. Has a list of snack cards that are coming from the back-end seed data
 1. Has a link to each snack's show page
@@ -57,6 +56,10 @@ It might be a good idea if you begin with the back-end setup and then move on to
 1. Can update a snack and then redirects back to the index page
 1. Delete button
 1. Can delete a snack using the app
+1. Front-end hosted and accessible online
+
+
+#### Deployment
 1. Front-end hosted and accessible online
 
 #### Presentation
