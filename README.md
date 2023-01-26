@@ -59,6 +59,9 @@ It might be a good idea if you begin with the back-end setup and then move on to
 1. Can delete a snack using the app
 1. Front-end hosted and accessible online
 
+#### Presentation
+1. You will present as a group your application to the class. Each team member must participate (1 pt)
+
 > **Total**: 23 points
 
 > **Note**: There are no front-end tests; your hosted application's functionality and code quality will be used to evaluate you.
