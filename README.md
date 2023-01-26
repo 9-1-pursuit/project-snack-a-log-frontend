@@ -31,7 +31,7 @@ For this project, there are 40 features or functionality to build. You are requi
 
 ### Back-end setup
 
-It might be a good idea if you begin with the back-end setup and then moved on to setting up the front-end.
+It might be a good idea if you begin with the back-end setup and then move on to the front-end, at least for planning.
 
 ### Front-end
 
