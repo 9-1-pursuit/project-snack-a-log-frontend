@@ -20,6 +20,8 @@ For this project, there are 40 features or functionality to build. You are requi
 - One person in the group should fork and clone the front end
 - One person in the group should fork and clone the backend
 - All group members should be added as collaborators to the repos
+- One possibility for approach to working could be to partner 2 people on the frontend and partner 2 people on the backend
+- It is up to you how you choose to work as a team
 
 
 ### Question Asking
@@ -29,7 +31,7 @@ For this project, there are 40 features or functionality to build. You are requi
 
 ### Back-end setup
 
-It would be best if you began with the back-end setup and then moved on to setting up the front-end.
+It might be a good idea if you begin with the back-end setup and then moved on to setting up the front-end.
 
 ### Front-end
 
