@@ -63,7 +63,7 @@ It might be a good idea if you begin with the back-end setup and then move on to
 1. Front-end hosted and accessible online
 
 #### Presentation
-1. You will present as a group your application to the class. Each team member must participate (1 pt)
+1. You will present as a group your application to the class. Each team member must participate
 
 ### Point Structure<br />
 > Total Frontend: 23 points<br />
