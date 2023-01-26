@@ -14,7 +14,6 @@ For this project, there are 40 features or functionality to build. You are requi
 - Use Express to build a complete CRUD back-end application that adheres to RESTful routes.
 - Use back-end unit tests to guide the building process.
 - Deploy the applications separately so that anyone can see them online and the two online applications can interact.
-- [Snack-A-Log Video-Demo](https://drive.google.com/file/d/1aVnfu7ANdUPbfJhtSb45G2r0JSGtSI2t/view?usp=sharing)
 
 ## User Stories, Acceptance Criteria, and Code Quality Rubric
 
@@ -111,3 +110,4 @@ Use the resources below to deploy your application.
 
 1. [Netlify Deployment Instructions](https://github.com/9-1-pursuit/guide-deployment/tree/main/netlify-create-react-app)
 1. [Netlify Deployment Video](https://drive.google.com/file/d/1am3ljqxJTyvPQ5hzlsaU7o_bf6-lA4UK/view?usp=sharing)
+1. [Snack-A-Log Video-Demo](https://drive.google.com/file/d/1aVnfu7ANdUPbfJhtSb45G2r0JSGtSI2t/view?usp=sharing)
