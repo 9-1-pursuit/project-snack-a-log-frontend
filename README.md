@@ -27,7 +27,7 @@ For this project, there are 40 features or functionality to build. You are requi
 ### Question Asking
 - You will be given 4 tokens. These tokens represent the number of debugging questions **per team** you are allowed to ask an instructor during this complete sprint. (clarifying questions about the instructions are not included)
 
-## User Stories, Acceptance Criteria, and Code Quality Rubric
+## User Stories and Acceptance Criteria
 
 ### Back-end setup
 
