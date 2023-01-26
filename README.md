@@ -15,7 +15,7 @@ For this project, there are 40 features or functionality to build. You are requi
 
 
 ### Groups
-- You will be working in groups of 4 for this 4 day Sprint.
+- You will be working in groups of 5 for this 4 day Sprint.
 - One person should create a Trello board and add all members to it
 - One person in the group should fork and clone the front end
 - One person in the group should fork and clone the backend
