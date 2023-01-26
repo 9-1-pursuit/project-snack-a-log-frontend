@@ -66,14 +66,9 @@ It might be a good idea if you begin with the back-end setup and then move on to
 > Total Frontend: 23 points<br />
 > Total Backend: 21 points<br />
 > Presentation: 1 point
+> **Grand total**: 45 points
 
 > **Note**: There are no front-end tests; your hosted application's functionality and code quality will be used to evaluate you.
-
-### Additional points:
-
-- Completed front-end (see [project-snack-a-log-back-end](https://github.com/9-1-pursuit/project-snack-a-log-backend) for more details)
-
-> **Grand total**: 45 points
 
 ## Getting Started
 
