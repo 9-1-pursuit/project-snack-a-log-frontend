@@ -8,12 +8,22 @@ For this project, there are 40 features or functionality to build. You are requi
 
 ## Overview
 
-- You will be working in groups of 4 for this 4 day Sprint.
-- You will be given 4 tokens. These tokens represent the number of debugging questions **per team** you are allowed to ask an instructor during this complete sprint. (clarifying questions about the instructions are not included)
+### Basic Instructions
 - Using the [`project-snack-a-log-frontend`](https://github.com/9-1-pursuit/project-snack-a-log-frontend) and [`project-snack-a-log-backend`](https://github.com/9-1-pursuit/project-snack-a-log-backend) repos, create a full-stack web application by building the two applications and having them interact.
 - Use Express to build a complete CRUD back-end application that adheres to RESTful routes.
-- Use back-end unit tests to guide the building process.
 - Deploy the applications separately so that anyone can see them online and the two online applications can interact.
+
+
+### Groups
+- You will be working in groups of 4 for this 4 day Sprint.
+- One person should create a Trello board and add all members to it
+- One person in the group should fork and clone the front end
+- One person in the group should fork and clone the backend
+- All group members should be added as collaborators to the repos
+
+
+### Question Asking
+- You will be given 4 tokens. These tokens represent the number of debugging questions **per team** you are allowed to ask an instructor during this complete sprint. (clarifying questions about the instructions are not included)
 
 ## User Stories, Acceptance Criteria, and Code Quality Rubric
 
