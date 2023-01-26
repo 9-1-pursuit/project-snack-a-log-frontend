@@ -4,7 +4,7 @@
 
 Create an app that allows users to log their favorite snacks. Add functionality that will enable users to see whether or not their snack is healthy based on a simple algorithm.
 
-For this project, there are 40 features or functionality to build. You are required to successfully build a minimum of 28 features to pass this project.
+For this project, there are 45 features, points, functionalities to build. You are required to successfully reach a minimum of 32 points to pass this project.
 
 ## Overview
 
