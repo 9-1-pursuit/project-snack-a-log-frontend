@@ -63,8 +63,8 @@ It might be a good idea if you begin with the back-end setup and then move on to
 1. You will present as a group your application to the class. Each team member must participate (1 pt)
 
 > **Points**
-> **Total Frontend**: 23 points
-> **Total Backend**: 21 points
+> **Total Frontend**: 23 points<br />
+> **Total Backend**: 21 points<br />
 > **Presentation**: 1 point
 
 > **Note**: There are no front-end tests; your hosted application's functionality and code quality will be used to evaluate you.
