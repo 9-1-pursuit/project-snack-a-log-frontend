@@ -54,7 +54,6 @@ For this project, there are 45 features, points, functionalities to build. You a
 1. Can update a snack and then redirects back to the index page
 1. Delete button
 1. Can delete a snack using the app
-1. Front-end hosted and accessible online
 
 
 #### Deployment
