@@ -31,7 +31,7 @@ For this project, there are 45 features, points, functionalities to build. You a
 [Click here for Back-end Instructions](https://github.com/9-1-pursuit/project-snack-a-log-backend)
 
 
-> ***Suggestion*** It might be a good idea if you begin with the [Back-end setup](https://github.com/9-1-pursuit/project-snack-a-log-backend)) and then move on to the front-end, at least for planning.
+> ***Suggestion:*** It might be a good idea if you begin with the [Back-end setup](https://github.com/9-1-pursuit/project-snack-a-log-backend)) and then move on to the front-end, at least for planning.
 
 1. It Can load the index page and has navigation to the New page
 1. Has a list of snack cards that are coming from the back-end seed data
