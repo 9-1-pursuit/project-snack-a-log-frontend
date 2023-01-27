@@ -38,7 +38,7 @@ For this project, there are 45 features, points, functionalities to build. You a
 1. Has a link to each snack's show page
 1. Has a solid heart, if the snack is healthy
 1. Has a heart outline; if the snack is unhealthy
-1. Has the CSS that is detailed in the tests
+1. Has good CSS design that shows at minimum a good faith effort
 1. Show page
 1. Shows header text
 1. Can navigate to the New page
