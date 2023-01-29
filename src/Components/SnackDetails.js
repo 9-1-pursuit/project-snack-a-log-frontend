@@ -27,5 +27,9 @@ export default function SnackDetails() {
       .catch((error) => console.warn(error));
   };
 
-  return <div>SnackDetails</div>;
+  return (
+    <div className="snack_details">
+      <h3>{snack.name}</h3>
+    </div>
+  );
 }
