@@ -8,8 +8,6 @@ const API = process.env.REACT_APP_API_URL;
 export default function Snacks() {
   const [snacks, setSnacks] = useState([]);
 
-  console.log(API);
-
   useEffect(() => {
     axios
       .get(`${API}/snacks`)
@@ -19,7 +17,20 @@ export default function Snacks() {
       })
       .catch((c) => console.warn("catch, c"));
   }, []);
-  console.log(snacks);
+  
+  
+  // for (let object of snacks) {
+  //   if((Number(object.fiber) > 5 || Number(object.protein) > 5) && (object.added_sugar) < 5){
+  //     object.is_healthy = true
+  //   }
+  //   else{
+  //     object.is_healthy = false
+  //   }
+  // }
+  
+  // console.log(snacks);
+
+
   return (
     <article>
       {snacks.map((snack) => {
