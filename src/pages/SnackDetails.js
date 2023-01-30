@@ -19,8 +19,8 @@ function SnackDetails() {
             console.warn("catch", c);
         });
     }, [id])
-
     console.log(snack)
+
 
     return (
         <div className="details">
