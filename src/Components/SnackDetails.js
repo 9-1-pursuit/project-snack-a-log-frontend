@@ -2,6 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { link, useParams, useNavigate } from "react-router-dom";
+
+import heart from ".././assets/heart-solid.png";
+import empty from ".././assets/heart-regular.png";
 // CSS
 import "./SnackDetails.css";
 
@@ -49,27 +52,34 @@ export default function SnackDetails() {
               <p>Fiber: {snack.fiber}</p>
               <p>Protein: {snack.protein}</p>
               <p>Sugar: {snack.added_sugar}</p>
-              <p>HEALTHY?: {snack.is_healthy}</p>
+              <p>
+                HEALTHY ?:{" "}
+                {snack.is_healthy ? (
+                  <img src={heart} alt={heart} />
+                ) : (
+                  <img src={empty} alt={empty} />
+                )}
+              </p>
             </div>
           </div>
         </div>
-      <div className="button_container">
-        <button
-          onClick={() => {
-            navigate(`/snacks`);
-          }}
-        >
-          Back!
-        </button>
-        <button
-          onClick={() => {
-            navigate(`/snacks/${id}/edit`);
-          }}
-        >
-          Edit
-        </button>
-        <button onClick={deleteSnack}>Delete</button>
-      </div>
+        <div className="button_container">
+          <button
+            onClick={() => {
+              navigate(`/snacks`);
+            }}
+          >
+            Back!
+          </button>
+          <button
+            onClick={() => {
+              navigate(`/snacks/${id}/edit`);
+            }}
+          >
+            Edit
+          </button>
+          <button onClick={deleteSnack}>Delete</button>
+        </div>
       </div>
     </>
   );

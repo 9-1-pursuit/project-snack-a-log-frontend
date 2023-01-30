@@ -40,6 +40,13 @@ export default function EditSnackForm() {
     updateSnack(snack);
   };
 
+  useEffect(() => {
+    axios
+      .get(`${API}/snacks/${id}`)
+      .then((res) => setSnack(res.data))
+      .catch((err) => console.log(err));
+  }, [id, navigate]);
+
   return (
     <div>
       EditSnackForm
