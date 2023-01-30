@@ -1,11 +1,12 @@
-import Snacks from "../Components/Snack";
+import Snacks from "../Components/Snacks";
 
 function Show() {
-    return (
-        <div>
-            <Snacks/>
-        </div>
-    );
+  return (
+    <div>
+      <h2>Snacks Index</h2>
+      <Snacks />
+    </div>
+  );
 }
 
 export default Show;
