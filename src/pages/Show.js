@@ -1,4 +1,4 @@
-function Error() {
+function Show() {
     return (
         <div>
             
@@ -6,4 +6,4 @@ function Error() {
     );
 }
 
-export default Error;
+export default Show;
