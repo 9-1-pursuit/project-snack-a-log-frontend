@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+}
+
+nav {
+    background-color: darkblue;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    grid-column-gap: 15px;
+    align-items: baseline;
+    padding: 0px 20px 0px 25px;
+}
+
+nav h1 {
+    color: orange;
+}
+
+nav h2 {
+    color: white;
+    font-size: 30px;
+}
