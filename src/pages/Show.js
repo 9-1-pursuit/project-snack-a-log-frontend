@@ -1,12 +1,11 @@
-import Snacks from "../Components/Snacks";
+import React from 'react'
+import SnackDetails from '../Components/SnackDetails'
 
-function Show() {
+export default function Show() {
   return (
     <div>
-      <h2>Snacks Index</h2>
-      <Snacks />
+        <h2>Show Snack Details</h2>
+        <SnackDetails/>
     </div>
-  );
+  )
 }
-
-export default Show;
