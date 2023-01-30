@@ -77,11 +77,8 @@
 
 .card {
   width: 60vw;
-  height: 80vh;
-  text-align: center;
-
-
-  
+  height: 30vh;
+  /* border: 2px solid green; */
 }
 
 .card__content {
@@ -138,13 +135,16 @@
 
 .card__subtitle {
   transform: var(--level-two);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 0.75rem;
-  font-weight: var(--fw-bold);
+  /* text-transform: uppercase; */
+  /* letter-spacing: 4px; */
+  /* font-size: 0.75rem; */
+  /* font-weight: var(--fw-bold); */
   opacity: 0.7;
   height: 300px;
   width: 300px;
+  /* margin: 0;
+  padding: 0; */
+ 
 }
 
 .card__body {
@@ -155,12 +155,17 @@
 }
 
 .body_image {
-  height: 90px;
-  width: 90px;
+  height: 100px;
+  width: 100px;
 }
 
 .card__back {
   transform: rotateY(0.5turn);
   color: var(--clr);
   background: #333;
+}
+
+.button_container{
+margin-top: 60px;
+
 }
