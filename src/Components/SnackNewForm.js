@@ -10,12 +10,20 @@ function SnackNewForm(){
         fiber: "",
         protein: "", 
         added_sugar: "",
-        is_healthy: false, 
+        is_healthy: false,
         image: 'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image'
       }]);
 
+      
+      // Number(protein) > 5 || Number(fiber) >5 && added_sugar < 5 ? true : false,
 
       let navigate = useNavigate();
+
+      const remove = (form) => {
+        const filter = snack.filter((s) => s !== form);
+        setSnack(filter)
+    }
+
 
       const addSnacks = (newSnack) => {
         axios
@@ -53,22 +61,13 @@ function SnackNewForm(){
       };
 
 
-    //   name: "",
-    //   fiber: "",
-    //   protein: "", 
-    //   added_sugar: "",
-    //   is_healthy: false, 
-    //   image: ""
-
-console.log(snack)
-
-
       return (
         <div className="New">
           <form onSubmit={handleSubmit}>
            {snack.map((x, i) => {
             return(
             <div>
+               <button onClick={() => remove(x)}>Remove</button>
               <label htmlFor='name'>Name: </label>
               <input
               type="text"
@@ -120,8 +119,6 @@ console.log(snack)
           </Link>
         </div>
       );
-
-
 }
 
 export default SnackNewForm
