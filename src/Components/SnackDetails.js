@@ -53,7 +53,6 @@ export default function SnackDetails() {
             </div>
           </div>
         </div>
-      </div>
       <div className="button_container">
         <button
           onClick={() => {
@@ -70,6 +69,7 @@ export default function SnackDetails() {
           Edit
         </button>
         <button onClick={deleteSnack}>Delete</button>
+      </div>
       </div>
     </>
   );
