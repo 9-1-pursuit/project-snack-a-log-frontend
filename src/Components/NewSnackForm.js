@@ -31,7 +31,7 @@ export default function NewSnackForm() {
   });
 
   const handleTextChange = (e) => {
-    setSnack({ ...snack, [e.traget.id]: e.target.value });
+    setSnack({ ...snack, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = (e) => {
