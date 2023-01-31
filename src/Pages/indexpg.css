@@ -1,0 +1,29 @@
+.snacks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  /* margin: 0px 30px 20px -15px; */
+}
+
+.single_snack {
+  display: block;
+  width: 400px;
+  height: auto;
+  border: 2px solid black;
+border-radius: 25px; 
+ margin: 20px 25px 15px 17px;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 5px 2px 15px 2px #517663;
+}
+
+.snack-img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 25px; 
+
+ 
+}

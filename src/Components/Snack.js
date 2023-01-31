@@ -8,8 +8,8 @@ export default function Snack({
     // <div className="snack_container">
     <Link to={`/snacks/${id}`}>
       <div className="single_snack">
+        <img className="snack-img" src={image} alt={image} />
         <h3>{name}</h3>
-        <img src={image} alt={image} />
       </div>
     </Link>
     // </div>
