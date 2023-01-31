@@ -1,36 +1,73 @@
 .index{
-    width: 90%;
+    width: 95%;
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 10px;
+}
+
+.index h2{
+    grid-column: span 3;
+    width: fit-content;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.index a:last-child {
+    display: none;
+}
+
+.index, .index h2 {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
 }
 
 .index-snack {
+    grid-column: 2;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr .7fr .2fr ;
+    grid-template-columns: .4fr .5fr .2fr ;
     grid-template-rows: auto;
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 .index-snack img {
     height: 150px;
+    max-width: 150px;
+}
+
+.index aside {
+    border: 2px solid black;
+    height: 80vh;
 }
 
 
 
 
 
-
+/* footer */
+footer {
+    z-index: 100;
+}
 
 
 
 
 /* Mobile view  */
 @media (max-width:360px){
+    .index h2 {
+    background-color: purple;
+    color: orangered;
+    border: 1px solid orangered;
+    }
     .index a img {
         height: 60px;
         position: fixed;
         z-index: 500;
         left: 36%;
-        top: 80%;
+        top: 75%;
         border-radius: 50%;
     }
     .index-snack {
@@ -42,8 +79,9 @@
         height: 150px;
         border-radius: 10px;
     }
-    .snack-details {
+    .index aside {
         display: none;
     }
+    
 
 }

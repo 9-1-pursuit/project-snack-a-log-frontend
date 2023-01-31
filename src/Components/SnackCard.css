@@ -1,16 +1,32 @@
 
 .container, .middle {
-    visibility: none;
     width: 0%;
     padding:0%;
     margin: 0%;
 }
+.text {
+    display: none;
+}
+.container {
+    grid-column: 1;
+}
 
+.container img {
+    visibility: visible;
+}
+
+.snack-details {
+    grid-column: 2;
+}
 
 @media (max-width: 360px){
+    .snack-details {
+        display: none;
+    }
     .container {
         position: relative;
         width: 150px;
+        grid-column: unset;
       }
       
       .container img {
@@ -41,6 +57,7 @@
       }
       
       .text {
+        display: unset;
         background-color: rgba(0, 0, 0, 0.786);
         color: white;
         font-size: 20px;
