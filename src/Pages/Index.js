@@ -1,5 +1,6 @@
 import React from "react";
 import Snacks from "../Components/Snacks";
+import "./indexpg.css"
 
 export default function Index() {
   return (

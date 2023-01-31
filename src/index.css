@@ -1,3 +1,33 @@
-.nav_index {
+/* .nav_index {
   text-decoration: none;
+} */
+
+body {
+  padding: 0%;
+  margin: 0%;
+  height: 100%;
 }
+
+
+nav {
+  background: rgb(185, 201, 185);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  padding-bottom: 0%;
+  /* box-shadow: 2px 2px 4px rgb(193, 188, 188); */
+  /* margin-bottom: 1em;   */
+}
+
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
