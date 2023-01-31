@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import regular from "../assets/heart-regular.png";
 import solid from "../assets/heart-solid.png";
+
 export default function Snack({ snack }) {
   return (
     <section>

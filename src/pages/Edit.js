@@ -1,7 +1,11 @@
+import SnackEditForm from "../Components/SnackEditForm";
+
+
 function Edit() {
     return (
-        <div>
-            
+        <div className="Edit">
+            <h2>Edit</h2>
+            <SnackEditForm />
         </div>
     );
 }

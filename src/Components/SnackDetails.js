@@ -50,7 +50,12 @@ function SnackDetails() {
             <Link to="/snacks">
                 <button>Back</button>
             </Link>
-            <button onClick={() => setViewModal(true)}>Edit</button>
+            {/* <button onClick={() => setViewModal(true)}>Edit</button> */}
+            <>
+          <Link to={`/snacks/${id}/edit`}>
+            <button>Edit</button>
+          </Link>
+        </>
             <button onClick={handleDelete}>Delete</button>
         </div>
     </div>
