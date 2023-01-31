@@ -1,5 +1,7 @@
+import DevCard from "../Components/DevCard.js";
+
 export default function About() {
-    return(
-        <h2>About Page</h2>
-    )
+  return (
+      <DevCard />
+  );
 }

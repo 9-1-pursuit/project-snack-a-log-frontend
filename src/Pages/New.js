@@ -1,5 +1,7 @@
+import Form from "../Components/Form.js";
+
 export default function New() {
-    return(
-        <h2>New Page</h2>
-    )
+  return (
+      <Form />
+  );
 }

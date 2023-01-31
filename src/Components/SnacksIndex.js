@@ -1,3 +1,5 @@
+import "./SnacksIndex.css"
+
 export default function SnacksIndex() {
     return (
         <div className="index">

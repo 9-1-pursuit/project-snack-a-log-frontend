@@ -1,5 +1,7 @@
+import Form from "../Components/Form.js";
+
 export default function Edit() {
-    return(
-        <h2>Edit Page</h2>
-    )
+  return (
+      <Form />
+  );
 }

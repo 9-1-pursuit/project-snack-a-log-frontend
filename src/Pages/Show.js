@@ -1,5 +1,7 @@
+import SnackShow from "../Components/SnackShow.js";
+
 export default function Show() {
-    return(
-        <h2>Show Page</h2>
-    )
+  return (
+    <SnackShow />
+  )
 }
