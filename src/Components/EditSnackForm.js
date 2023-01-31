@@ -14,8 +14,8 @@ export default function EditSnackForm() {
     fiber: 0,
     protein: 0,
     added_sugar: 0,
-    isHealthy: false,
-    image: "",
+    image:
+      "" || "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
   });
 
   const updateSnack = (updatedSnack) => {
@@ -31,12 +31,7 @@ export default function EditSnackForm() {
   };
 
   const handleTextChange = (e) => {
-    setSnack({ ...snack, [e.traget.id]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    updateSnack(snack);
+    setSnack({ ...snack, [e.target.id]: e.target.value });
   };
 
   useEffect(() => {
@@ -46,9 +41,13 @@ export default function EditSnackForm() {
     );
   }, [id, navigate]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateSnack(snack, id);
+  };
+
   return (
     <div>
-      EditSnackForm
       <div className="edit_form">
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">

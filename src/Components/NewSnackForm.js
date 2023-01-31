@@ -25,8 +25,8 @@ export default function NewSnackForm() {
     fiber: 0,
     protein: 0,
     added_sugar: 0,
-    isHealthy: false,
-    image: "",
+    image:
+      "" || "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
   });
   // const [image, setImage] = useState(
   //   "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
