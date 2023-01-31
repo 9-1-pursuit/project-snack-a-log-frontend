@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav>
       <h1>
-        <Link className="nav_index" to="/snacks">
+        <Link className="nav_index" to="/">
           Snacks baby!
         </Link>
       </h1>

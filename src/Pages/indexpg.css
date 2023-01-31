@@ -4,13 +4,14 @@
   justify-content: center;
   text-align: center;
   width: auto;
+  margin-top: 20px;
   /* margin: 0px 30px 20px -15px; */
 }
 
 .single_snack {
   display: block;
   width: 400px;
-  height: auto;
+  /* height: auto; */
   border: 2px solid black;
 border-radius: 25px; 
  margin: 20px 25px 15px 17px;
