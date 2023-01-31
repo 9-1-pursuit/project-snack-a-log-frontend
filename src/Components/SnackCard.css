@@ -1,0 +1,49 @@
+
+.container, .middle {
+    visibility: none;
+    width: 0%;
+    padding:0%;
+    margin: 0%;
+}
+
+
+@media (max-width: 360px){
+    .container {
+        position: relative;
+        width: 150px;
+      }
+      
+      .container img {
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+      
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        width: fit-content;
+      }
+      
+      .container:hover img {
+        opacity: 0.5;
+      }
+      
+      .container:hover .middle {
+        opacity: 1;
+      }
+      
+      .text {
+        background-color: rgba(0, 0, 0, 0.786);
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+      }
+}
