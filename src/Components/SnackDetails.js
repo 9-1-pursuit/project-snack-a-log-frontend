@@ -25,9 +25,9 @@ function SnackDetails(){
             {snack.is_healthy ?  <img src="./assets/heart-solid.png"></img> : <img src="./assets/heart-regular.png"></img>}
            <p>{snack.name}</p>
            <img src="{snack.image}" alt="snack"></img>
-           <p>{snack.protein}</p>
-           <p>{snack.fiber}</p>
-           <p>{snack.added_sugar}</p> 
+           <p>protein: {snack.protein}</p>
+           <p>fiber: {snack.fiber}</p>
+           <p>sugar: {snack.added_sugar}</p> 
            <button>Back</button>
            <button>Edit</button>
            <button>Delete</button>
