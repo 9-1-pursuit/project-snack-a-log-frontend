@@ -10,7 +10,7 @@ function SnackDetails(){
 
     useEffect(() => {
         axios
-        .get(`${API}/bookmarks/${id}`)
+        .get(`${API}/snacks/${id}`)
         .then((res) => {
             setSanck(res.data)
         })
