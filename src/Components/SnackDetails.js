@@ -61,7 +61,10 @@ else{
             <Link to="/snacks">
                 <button className={styles.button}>Back</button>
             </Link>
-            <button className={styles.button} onClick={() => setViewModal(true)}>Edit</button>
+            {/* <button className={styles.button} onClick={() => setViewModal(true)}>Edit</button> */}
+            <Link to={`/snacks/${id}/edit`}>
+                <button className={styles.button}>Edit</button>
+            </Link>
             <button className={styles.button} onClick={handleDelete}>Delete</button>
         </div>
     </div>
