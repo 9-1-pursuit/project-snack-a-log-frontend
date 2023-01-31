@@ -10,7 +10,7 @@ body {
 
 
 nav {
-  background: antiquewhite;
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;

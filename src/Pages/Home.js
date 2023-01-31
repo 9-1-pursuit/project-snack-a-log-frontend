@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <img
           className="bg"
-          src="https://nourishwithty.com/images/4BasicsofWeighingFoodForFatLoss/scale1.gif"
+          src="https://atlasbiomed.com/blog/content/images/2020/06/2020-06-16-Prebiotic-quinoa-bowl.png"
           alt="homeimg"
         />
       </div>
