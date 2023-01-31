@@ -1,9 +1,12 @@
+import Provider from "./Provider/Provider";
 import RouteComponent from "./Components/RouteComponent";
 
 function App() {
   return (
     <div className="App">
-      <RouteComponent />
+      <Provider>
+        <RouteComponent />
+      </Provider>
     </div>
   );
 }

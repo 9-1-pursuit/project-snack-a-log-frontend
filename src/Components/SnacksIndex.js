@@ -1,9 +1,12 @@
-import "./SnacksIndex.css"
+import { useContextProvider } from "../Provider/Provider.js";
+import "./SnacksIndex.css";
 
 export default function SnacksIndex() {
-    return (
-        <div className="index">
-            <h2>Index</h2>
-        </div>
-    )
+  const { snacks } = useContextProvider();
+  
+  return (
+    <div className="index">
+      <h2>Index</h2>
+    </div>
+  );
 }
