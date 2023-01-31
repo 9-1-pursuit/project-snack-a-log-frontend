@@ -34,24 +34,28 @@ function SnackDetails() {
       });
   }, [id]);
 
+  const styles = {
+    button: 'py-2 px-4 mx-2 hover:shadow-lg shadow-indigo-500/50'
+  }
+
   return (
     <div className="details">
-        <section className="imgs">
-            <img src={snack.image} alt={`${snack.name} image`}/>
-            { snack.is_healthy ? <img src={heartSolid}/> : <img src={heartOutline}/> }
+        <section className="imgs float-left">
+            <img src={snack.image} alt={`${snack.name} image`} className="ml-40 mr-20 border-double border-8 border-stone-500" />
         </section>
         <section className="info">
-            <h1>{snack.name}</h1>
-            <p><span>Protein:</span> {snack.protein} g</p>
-            <p><span>Fiber:</span> {snack.fiber} g</p>
-            <p><span>Added Sugar:</span> {snack.added_sugar} g</p>
+            { snack.is_healthy ? <img src={heartSolid}  className="float-right"/> : <img src={heartOutline}  className="float-right"/> }
+            <h1 className="text-6xl underline pb-10">{snack.name}</h1>
+            <p className="text-2xl"><span className="font-bold" >Protein:</span> {snack.protein} g</p>
+            <p><span className="font-bold">Fiber:</span> {snack.fiber} g</p>
+            <p><span className="font-bold">Added Sugar:</span> {snack.added_sugar} g</p>
         </section>
         <div className="buttons">
             <Link to="/snacks">
-                <button>Back</button>
+                <button className={styles.button}>Back</button>
             </Link>
-            <button onClick={() => setViewModal(true)}>Edit</button>
-            <button onClick={handleDelete}>Delete</button>
+            <button className={styles.button} onClick={() => setViewModal(true)}>Edit</button>
+            <button className={styles.button} onClick={handleDelete}>Delete</button>
         </div>
     </div>
   );
