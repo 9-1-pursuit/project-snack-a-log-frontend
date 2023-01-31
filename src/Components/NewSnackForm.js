@@ -26,18 +26,33 @@ export default function NewSnackForm() {
     protein: 0,
     added_sugar: 0,
     isHealthy: false,
-    image:
-      "" || "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
+    image: "",
   });
+  // const [image, setImage] = useState(
+  //   "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
+  // );
 
   const handleTextChange = (e) => {
+    // handleImage(e);
     setSnack({ ...snack, [e.target.id]: e.target.value });
+    // if (snack.image.length === 0) {
+    //   setSnack({
+    //     ...snack,
+    //     [e.target.id]: e.target.value,
+    //     [snack.image]:
+    //       "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
+    //   });
+    // }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addSnack(snack);
   };
+
+  // const handleImage = (e) => {
+  //   setImage({ ...image, [e.target.id]: image });
+  // };
 
   return (
     <div className="new_form">
@@ -86,6 +101,8 @@ export default function NewSnackForm() {
             id="image"
             value={snack.image}
             type="string"
+            placeholder="http://"
+            // defaultValue="https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
             onChange={handleTextChange}
           />
         </label>

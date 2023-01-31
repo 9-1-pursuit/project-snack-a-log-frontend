@@ -15,8 +15,7 @@ export default function EditSnackForm() {
     protein: 0,
     added_sugar: 0,
     isHealthy: false,
-    image:
-      "" || "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
+    image: "",
   });
 
   const updateSnack = (updatedSnack) => {
@@ -41,10 +40,10 @@ export default function EditSnackForm() {
   };
 
   useEffect(() => {
-    axios
-      .get(`${API}/snacks/${id}`)
-      .then((res) => setSnack(res.data))
-      .catch((err) => console.log(err));
+    axios.get(`${API}/snacks/${id}`).then(
+      (res) => setSnack(res.data),
+      (error) => navigate(`/not-found`)
+    );
   }, [id, navigate]);
 
   return (
