@@ -37,6 +37,13 @@ function SnackDetails() {
   const styles = {
     button: 'py-2 px-4 mx-2 hover:shadow-lg shadow-indigo-500/50'
   }
+  
+if((Number(snack.fiber) > 5 || Number(snack.protein) > 5) && (snack.added_sugar) < 5){
+  snack.is_healthy = true
+}
+else{
+  snack.is_healthy = false
+}
 
   return (
     <div className="details">
