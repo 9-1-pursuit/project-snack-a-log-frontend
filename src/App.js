@@ -9,6 +9,7 @@ import Show from "./Pages/Show";
 import Error from "./Pages/Error";
 //components
 import Navbar from "./Components/Navbar";
+import HealthySnack from "./Components/HealthySnack";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/healthysnack" element={<HealthySnack />} />
           <Route path="/snacks" element={<Index />} />
           <Route path="/snacks/:id" element={<Show />} />
           <Route path="/snacks/new" element={<New />} />
