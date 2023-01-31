@@ -8,13 +8,14 @@ const API = process.env.REACT_APP_API_URL;
 export default function Snacks() {
   const [snacks, setSnacks] = useState([]);
   const [allSnacks , setAllSnacks] = useState([])
+  const [filter , setFilter] = useState([])
   const [searchSnack, setSearchSnack] = useState("")
 
   useEffect(() => {
     axios
       .get(`${API}/snacks`)
       .then((res) => {
-        console.log(res.data);
+        setFilter(res.data)
         setAllSnacks(res.data)
         setSnacks(res.data);
       })
@@ -40,15 +41,37 @@ export default function Snacks() {
     const handleTextChange = (event) => {
       const search = event.target.value
       const result = search ? filterShows(search, allSnacks) : allSnacks
-      setSnacks(result)
+      setFilter(result)
       setSearchSnack(search)
     }
 
+    function handleFilter(healthy){
+      setFilter(healthy)
+    }
 
+    function filterCategory(e){
+      const filter = snacks.filter((x) => {
+        return(
+          x.is_healthy.toString() === e.target.value
+        )
+      })
+      handleFilter(filter)
+    }
+
+   
   return (
     <article>
+      <div className="is_healthy">
+      <label htmlFor="searchSnack">
+       Select Category:
+      <select onChange={filterCategory}>
+        <option value="">Select</option>
+         <option value="true">Healthy</option>
+          <option value="false">Unhealthy</option> 
+      </select>
+      </label>
+      </div>
       <div>
-
        <label htmlFor="searchSnack">
        Search Snack:
             <input
@@ -59,9 +82,9 @@ export default function Snacks() {
             />
              </label>
       </div>
-      {snacks.map((snack) => {
+      { filter.map((snack) => {
         return <Snack key={snack.id} snack={snack} />;
-      })}
+      })  }
     </article>
   );
 }

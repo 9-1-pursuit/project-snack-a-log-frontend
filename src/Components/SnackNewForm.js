@@ -122,7 +122,7 @@ console.log(snack)
        <p onClick={newRow}>Add new row</p>
        <input type="submit" />
       </form>
-      <Link to={`/`}>
+      <Link to={`/snacks`}>
         <button>Nevermind!</button>
       </Link>
     </div>
