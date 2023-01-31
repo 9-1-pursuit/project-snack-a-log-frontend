@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <div className="home">
       <div>
+        <h2 style={{ color: "white" }}>Welcome to Snacks baby!!!</h2>
         <img
           className="bg"
           src="https://atlasbiomed.com/blog/content/images/2020/06/2020-06-16-Prebiotic-quinoa-bowl.png"
@@ -22,7 +23,6 @@ export default function Home() {
       <div className="home-btn">
         <Link to="/healthysnack">Healthy Snack Recipes!</Link>
       </div>
-      
     </div>
   );
 }
