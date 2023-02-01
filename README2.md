@@ -18,7 +18,7 @@ Checks if the snack has invalid or missing information)IF snack is unhealthy has
 
 - As a user, I would see a back button redirect to the index
 
-- As a user, I will see an edit button that redirects to an edit page.It will show header text. Edit page will have a form with the correct labels and fields. Data is pre-filled into the form
+- As a user, I will see an edit button that redirects to an edit page.It will show header text. Edit page will have a form with the correct labels and fields. Data is pre-filled into the form.
 Can update a snack and then redirects back to the index page.(all fields required except image)
 
 - As a user, I would see a delete button that Can delete a snack using the app.{Delete route (with a valid id)
