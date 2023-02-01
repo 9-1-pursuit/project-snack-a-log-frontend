@@ -13,7 +13,7 @@ article img {
     margin-left: 20px
 }
 
-article {
+article .dev {
     width: 86%;
     display: flex;
     padding-right: 20px;
@@ -58,7 +58,7 @@ article img {
 }
 
 
-button {
+.dev button {
     background-color: blue;
     color: white;
     padding: 10px 20px;
@@ -68,12 +68,12 @@ button {
     transition: all 0.3s;
 }
 
-button:hover {
+.dev button:hover {
     transform: translateY(-2px);
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
+.dev button:active {
     transform: translateY(0);
     box-shadow: none;
 }
