@@ -62,11 +62,13 @@ export default function SnacksIndex() {
           data.map(snack => 
           <SnackCard 
           key={snack.id}
-          snack={snack} />)
+          snack={snack}
+          setSearch={setSearch}
+          setSearchResult={setSearchResult} />)
         }
       </section>
 
-      {/* aside 2 for misc data */}
+      {/* aside 2 for snacks list */}
       <aside className="index-right">
         <h5>Current Snacks</h5>
         {

@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom"
+import { useContextProvider } from "../Provider/Provider"
 import "./SnackCard.css"
 
-export default function SnackCard({snack}) {
+export default function SnackCard({snack, setSearchResult, setSearch}) {
     const {id, name, fiber, protein, added_sugar, is_healthy, image, description, carbs} = snack
+    const { API, axios, snacks, setSnacks } = useContextProvider()
+
+    function handleDelete(){
+        axios.delete(`${API}/snacks/${id}`)
+        .then((respJson) => {
+            const idValue= respJson.data.id
+            const newSnacks = snacks.filter(({id}) => idValue !== id)
+            setSnacks(newSnacks)
+            setSearch("")
+            setSearchResult(snacks)
+
+        })
+        .catch(err => console.log(err))
+    }
 
     return(
        <>
@@ -26,7 +41,9 @@ export default function SnackCard({snack}) {
         {/* favorite / delete */}
         <section className="index-fav-delete">
             <span>check</span>
-            <span>delete</span>
+            <span>
+                <button onClick={(event) => handleDelete(event)}>Delete</button>
+            </span>
         </section>
        </>
     )
