@@ -32,6 +32,15 @@ export default function SnacksIndex() {
   function handleRadio(e) {
     const value = e.target.value
     setRadio(value)
+    const healthy = value === "healthy" ? true : false
+    if(value){
+      const healthyfilter = snacks.filter(({is_healthy}) => is_healthy === healthy )
+      setSearchResult(healthyfilter)
+    }
+    else {
+      setSearchResult(snacks)
+    }
+    
   }
 
 
