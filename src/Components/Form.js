@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
 import Solid from "../assets/heart-solid.png";
-import Outline from "../assets/heart-regular.png"
+import Outline from "../assets/heart-regular.png";
 import "./Form.css";
 
 export default function Form() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { axios, API } = useContextProvider();
   const [is_healthy, setIsHealthy] = useState(false);
@@ -40,11 +41,26 @@ export default function Form() {
     setSnack({ ...snack, [event.target.id]: event.target.value });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (id) {
+      axios
+        .put(`${API}/snacks/${id}`, snack)
+        .then(navigate(`/snacks/${id}`))
+        .catch((error) => console.log(error));
+    } else {
+      axios
+        .post(`${API}/snacks`, snack)
+        .then(navigate("/snacks"))
+        .catch((error) => console.log(error));
+    }
+  };
+
   return (
     <div className="form">
       <h2>{id ? "Edit" : "New"} Form</h2>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <div id="form-img">
           <img src={snack.image} />
           <div>
@@ -79,6 +95,7 @@ export default function Form() {
               id="carbs"
               type="number"
               min="0"
+              step="0.1"
               onChange={handleChange}
               value={snack.carbs}
             />
@@ -87,6 +104,7 @@ export default function Form() {
               id="fiber"
               type="number"
               min="0"
+              step="0.1"
               onChange={handleChange}
               value={snack.fiber}
             />
@@ -95,6 +113,7 @@ export default function Form() {
               id="protein"
               type="number"
               min="0"
+              step="0.1"
               onChange={handleChange}
               value={snack.protein}
             />
@@ -103,11 +122,12 @@ export default function Form() {
               id="added_sugar"
               type="number"
               min="0"
+              step="0.1"
               onChange={handleChange}
               value={snack.added_sugar}
             />
           </div>
-          <img src={is_healthy?Solid: Outline} />
+          <img src={is_healthy ? Solid : Outline} />
         </div>
         <input
           id="submit-button"
