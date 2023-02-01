@@ -7,7 +7,7 @@ const DevCard = ({ dev }) => {
 
   return (
     <article>
-      <img src={imageURL}></img>
+      <img className="photo" src={imageURL}></img>
       <div className="dev-content">
         <h3>{name}</h3>
         <p>{description}</p>
@@ -18,7 +18,7 @@ const DevCard = ({ dev }) => {
         </a>
         <a href={indeedURL}>
           <button href={indeedURL} variant="primary">
-            Indeed
+            LinkedIn
           </button>
         </a>
         <a href={email}>

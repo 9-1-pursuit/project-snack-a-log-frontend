@@ -4,15 +4,54 @@
 #2283E6 lighter blue
 #CDE60B lime
 #89990F green
+ white- rgb(239, 235, 235);
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap");
+
+* {
+  font-family: "Saira", sans-serif;
+  /* font-size: large; */
+}
+
+.form,
+.snack-info,
+.index,
+.dev-container {
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
 .dark {
-  color: #fff;
-  background-color: #333;
+  /* color: #fff; */
+  color: rgb(239, 235, 235);
   background-color: #031c36;
 }
 .light {
-  background-color: #fff;
-  color: rgb(0, 0, 0);
-  background-color: #afd6fc;
+  color: #003873;
+  background-color: #c3e0fd;
+}
+
+input,
+#searchbar {
+  border-radius: 10px;
+  border: 1px solid salmon;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #2283e6;
+}
+
+.dark a:hover {
+  color: #003873;
+}
+
+h5 {
+  color: #003873;
 }

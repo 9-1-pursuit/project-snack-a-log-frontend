@@ -1,5 +1,4 @@
 nav {
-  background-color: blue;
   background: linear-gradient(
     to right,
     #e62d21,
@@ -15,20 +14,33 @@ nav {
 nav a {
   padding-top: 20px;
   text-decoration: none;
-  color: orangered;
+  color: rgb(239, 235, 235);
   font-size: 24px;
+}
+
+nav a:hover {
+  color: orangered;
 }
 nav a img {
   margin-bottom: 15px;
 }
 
+.toggleTheme {
+  all: unset;
+  cursor: pointer;
+}
+
 .toggleButton {
   height: 60px;
   width: 60px;
+  border: 1px solid #65655e;
+  border-radius: 20px;
+  /* box-shadow: 5px 5px 5px 1px #52524b; */
 }
 
-.toggleTheme {
-  all: unset;
+.toggleButton:hover {
+  box-shadow: 3px 5px 5px 1px #52524b79;
+  transform: scale(1.1);
 }
 
 @media (max-width: 360px) {
