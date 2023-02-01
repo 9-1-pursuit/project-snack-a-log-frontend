@@ -1,4 +1,5 @@
 
+
 .container, .middle {
     width: 0%;
     padding:0%;
@@ -17,6 +18,14 @@
 
 .snack-details {
     grid-column: 2;
+    text-align: center;
+}
+
+.index-fav-delete {
+  text-align: center;
+  align-self: center;
+  height: fit-content;
+  display: grid;
 }
 
 .index-fav-delete span:last-child:hover {

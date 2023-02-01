@@ -9,6 +9,7 @@ export default function SnacksIndex() {
   const [search, setSearch] = useState("")
   const [searchResult, setSearchResult] = useState([])
   const [radio, setRadio] = useState("")
+  const [favorite, setFavorite] = useState([])
   const data = searchResult.length > 0 || search ? [...searchResult] : [...snacks]
 
   function filterSearch(string, objArr) {
@@ -55,7 +56,7 @@ export default function SnacksIndex() {
 
   useEffect(() => {
    
-  }, [snacks.length])
+  }, [snacks.length, favorite.length])
   
   return (
     <div className="index">
@@ -116,7 +117,15 @@ export default function SnacksIndex() {
 
       {/* aside1 can be dead space for pop up menu */}
       <aside className="index-left">
-        <h5>Misc.</h5>
+        <h5>Current Snacks</h5>
+          {
+            snacks.map(({name, id}) => 
+            <Link 
+            key = {id}
+            to={`/snacks/${id}`}>
+              <li>{name}</li>
+            </Link>)
+          }
       </aside>
       
       {/* snack details */}
@@ -127,20 +136,24 @@ export default function SnacksIndex() {
           key={snack.id}
           snack={snack}
           setSearch={setSearch}
-          setSearchResult={setSearchResult} />)
+          setSearchResult={setSearchResult}
+          favorite={favorite}
+          setFavorite={setFavorite} />)
         }
       </section>
 
       {/* aside 2 for snacks list */}
       <aside className="index-right">
-      <h5>Current Snacks</h5>
+        <h5>Favorites</h5>
         {
-          snacks.map(({name, id}) => 
-          <Link 
-          key = {id}
-          to={`/snacks/${id}`}>
-            <li>{name}</li>
-          </Link>)
+          favorite.map(({id, name}) => {
+           return <li>
+                  <Link to={`/snacks/${id}`}>
+                    {name}
+                  </Link>
+                  ❤️
+                </li>
+          })
         }
       </aside>
 
