@@ -9,7 +9,8 @@ export default function Form() {
   const navigate = useNavigate();
   const { id } = useParams();
   const { axios, API } = useContextProvider();
-  const [is_healthy, setIsHealthy] = useState(false);
+  const [isHealthy, setIsHealthy] = useState(false);
+  const [modal, setModal] = useState(false);
   const [snack, setSnack] = useState({
     name: "",
     carbs: "",
@@ -25,7 +26,7 @@ export default function Form() {
       axios
         .get(`${API}/snacks/${id}`)
         .then((res) => setSnack(res.data))
-        .catch((error) => console.log(error));
+        .catch((error) => navigate("/not-found"));
     }
   }, [id]);
 
@@ -43,7 +44,9 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (id) {
+    if (snack.name === "d3v$f4v$") {
+      setModal(true);
+    } else if (id) {
       axios
         .put(`${API}/snacks/${id}`, snack)
         .then(navigate(`/snacks/${id}`))
@@ -54,6 +57,11 @@ export default function Form() {
         .then(navigate("/snacks"))
         .catch((error) => console.log(error));
     }
+  };
+
+  const proceed = () => {
+    setModal(false);
+    navigate("/");
   };
 
   return (
@@ -76,6 +84,7 @@ export default function Form() {
             <input
               id="image"
               type="url"
+              placeholder="include http:// or https:// at front of url"
               onChange={handleChange}
               value={snack.image}
             />
@@ -90,7 +99,7 @@ export default function Form() {
 
         <div id="form-icon">
           <div>
-            <label htmlFor="carbs">Carbs:</label>
+            <label htmlFor="carbs">Carbs(g):</label>
             <input
               id="carbs"
               type="number"
@@ -99,7 +108,7 @@ export default function Form() {
               onChange={handleChange}
               value={snack.carbs}
             />
-            <label htmlFor="fiber">Fiber:</label>
+            <label htmlFor="fiber">Fiber(g):</label>
             <input
               id="fiber"
               type="number"
@@ -108,7 +117,7 @@ export default function Form() {
               onChange={handleChange}
               value={snack.fiber}
             />
-            <label htmlFor="protein">Protein:</label>
+            <label htmlFor="protein">Protein(g):</label>
             <input
               id="protein"
               type="number"
@@ -117,7 +126,7 @@ export default function Form() {
               onChange={handleChange}
               value={snack.protein}
             />
-            <label htmlFor="added_sugar">Added Sugar:</label>
+            <label htmlFor="added_sugar">Added Sugar(g):</label>
             <input
               id="added_sugar"
               type="number"
@@ -127,7 +136,10 @@ export default function Form() {
               value={snack.added_sugar}
             />
           </div>
-          <img src={is_healthy ? Solid : Outline} />
+          <div id="health-icon">
+            <img src={isHealthy ? Solid : Outline} />
+            <h3>{isHealthy ? "healthy" : "unhealthy"}</h3>
+          </div>
         </div>
         <input
           id="submit-button"
@@ -135,6 +147,15 @@ export default function Form() {
           value={id ? "Save Changes" : "Add Snack"}
         />
       </form>
+      {modal && (
+        <div className="overlay">
+          <div id="secret-modal">
+            <h4>Congratulations!</h4>
+            <h4>You have unlocked an easter egg!</h4>
+            <button onClick={proceed}>proceed</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
