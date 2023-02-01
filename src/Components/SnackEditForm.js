@@ -97,7 +97,7 @@ function SnackEditForm() {
         <input type="submit" />
       </form>
       <Link to={`/snacks/${id}`}>
-        <button>Nevermind!</button>
+        <button>Back</button>
       </Link>
     </div>
   );
