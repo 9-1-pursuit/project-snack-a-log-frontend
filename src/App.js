@@ -24,14 +24,14 @@ function App() {
   return (
     <div className={`App ${theme}`}>
       <Provider>
-        <button className="toggleTheme" onClick={toggleTheme}>
-          Toggle
-          {/* {theme === "light" ? (
+        {/* <button className="toggleTheme" onClick={toggleTheme}> */}
+        {/* Toggle */}
+        {/* {theme === "light" ? (
             <img className="toggleButton" src={darkMode} alt="dm" />
           ) : (
             <img className="toggleButton" src={lightMode} alt="lm" />
           )} */}
-        </button>
+        {/* </button> */}
         <RouteComponent />
       </Provider>
     </div>
