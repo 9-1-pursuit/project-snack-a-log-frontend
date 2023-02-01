@@ -1,0 +1,35 @@
+.snack-info {
+  text-align: center;
+  margin-top: 3rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+.snackInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 15px;
+}
+
+.snack-img {
+  height: 350px;
+  width: 350px;
+  border-radius: 50px;
+  /* border: 2px solid red; */
+}
+
+.snack-text {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 30%;
+  /* border: 2px solid green; */
+}
