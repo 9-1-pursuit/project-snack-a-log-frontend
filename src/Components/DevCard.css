@@ -14,6 +14,7 @@ article img {
 }
 
 article {
+    width: 86%;
     display: flex;
     padding-right: 20px;
     flex-direction: row;

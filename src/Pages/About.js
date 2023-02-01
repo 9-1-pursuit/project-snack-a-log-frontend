@@ -1,5 +1,5 @@
 import DevCard from "../Components/DevCard.js";
-
+import heart from "../assets/heart-solid.png"
 export default function About() {
 
   const dev1 = {
