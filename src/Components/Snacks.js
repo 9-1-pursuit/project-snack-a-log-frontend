@@ -15,7 +15,7 @@ const Snacks = () => {
             console.log(res.data)
             setSnacks(res.data);
         })
-        .catch((c) => console.warn("catch", c))``
+        .catch((c) => console.warn("catch", c))
     }, [])
 
     return (
@@ -23,7 +23,6 @@ const Snacks = () => {
             {snacks.map((snack) => {
                 return <Snack key={snack.id} snack={snack} />
             })}
-            
         </div>
     );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import heartSolid from "../assets/heart-solid.png";
+import heartOutline from "../assets/heart-regular.png";
 
 const Snack = ({ snack }) => {
     return (
@@ -10,13 +12,13 @@ const Snack = ({ snack }) => {
             </Link>
 
             <img src={snack.image} alt="Snack image"></img>
-            {snack.is_healthy ?(
+            {snack.is_healthy ? (
                 <span>
-                    <img src="./assets/heart-solid.png"></img>
+                    <img src={heartSolid}></img>
                 </span>
                 ): (
                     <span>
-                        <img src="./assets/heart-regular.png"></img>
+                        <img src={heartOutline}></img>
                     </span>
                 )}
         </section>
