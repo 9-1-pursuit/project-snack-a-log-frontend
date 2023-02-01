@@ -1,0 +1,134 @@
+.form h2 {
+  text-align: center;
+}
+
+form {
+  border: 3px solid blue;
+  border-radius: 24px;
+  width: 60vw;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightsalmon;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 50px;
+}
+
+#form-img {
+  grid-column: 1/3;
+  grid-row: 1/13;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+#form-img div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+form #form-img img {
+  border: 1px solid darkblue;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  background-color: white;
+  /* text-align: center; */
+  font-size: 16px;
+  color: blue;
+}
+
+form #form-icon {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  margin-top: 30px;
+}
+
+form #form-icon div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+form #form-icon #health-icon{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+form #form-icon #health-icon img {
+  margin: auto;
+}
+
+form #form-icon #health-icon h3 {
+  font-size: 28px;
+  color: maroon;
+}
+
+
+label {
+  font-size: 18px;
+}
+.form form input,
+textarea {
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid salmon;
+}
+
+#submit-button {
+  grid-column: 1/3;
+  width: 30%;
+  margin: 0 auto;
+  background-color: blue;
+  color: aquamarine;
+  border: 2px solid aquamarine;
+  border-radius: 24px;
+  font-size: 14px;
+}
+
+#submit-button:hover {
+  background-color: cornflowerblue;
+  color: darkslateblue;
+}
+
+#secret-modal {
+  border: 3px solid orange;
+  border-radius: 18px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  z-index: 1000;
+  text-align: center;
+  background-color: gold;
+  color: orangered;
+}
+
+#secret-modal h4 {
+  line-height: 1;
+}
+
+#secret-modal button {
+  color: orangered;
+  font-size: 14px;
+  background-color: aquamarine;
+  border: 1px solid orangered;
+  border-radius: 10px;
+}
+
+#secret-modal button:hover {
+  color: blue;
+  border: 1px solid blue;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(37, 13, 3, 0.9);
+  z-index: 1000;
+}
