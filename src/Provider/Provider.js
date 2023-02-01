@@ -2,6 +2,7 @@ import { useContext, createContext, useState, useEffect } from "react";
 import axios from "axios";
 import Nav from "../Components/Nav.js";
 import Footer from "../Components/Footer.js";
+// import "../Components/darkMode.css";
 
 export const ContextData = createContext();
 export function useContextProvider() {
@@ -11,6 +12,14 @@ export function useContextProvider() {
 export default function Provider({ children }) {
   const API = process.env.REACT_APP_API_URL;
   const [snacks, setSnacks] = useState([]);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    // document.body.className = theme;
+  }, [theme]);
+
 
   useEffect(() => {
     // console.log("Provider's useEffect")
@@ -25,7 +34,9 @@ export default function Provider({ children }) {
         API,
         axios,
         snacks,
-        setSnacks
+        setSnacks,
+        theme,
+        setTheme
       }}
     >
       <Nav />
