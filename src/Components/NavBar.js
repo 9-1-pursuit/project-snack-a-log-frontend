@@ -3,7 +3,12 @@ import React from 'react';
 const NavBar = () => {
     return (
         <nav>
-            <h1>Snack-A-LOG</h1>
+           <h1>
+        <Link to="/bookmarks">Bookmarks</Link>
+      </h1>
+      <button>
+        <Link to="/bookmarks/new">New Bookmark</Link>
+      </button>
             
         </nav>
     );
