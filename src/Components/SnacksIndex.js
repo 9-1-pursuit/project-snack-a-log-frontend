@@ -45,8 +45,9 @@ export default function SnacksIndex() {
       const healthyfilter = snacks.filter(({is_healthy}) => is_healthy === healthy )
       setSearchResult(healthyfilter)
     }
-    else if(search && value){
-      // code later
+    else if(search){
+      const healthyfilter = searchResult.filter(({is_healthy}) => is_healthy === healthy)
+      setSearchResult(healthyfilter)
     }
     else {
       setSearchResult(snacks)
