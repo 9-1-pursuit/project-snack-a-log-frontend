@@ -180,7 +180,7 @@ export default function SnacksIndex() {
         <h5>Favorites</h5>
         {favorite.map(({ id, name }) => {
           return (
-            <li>
+            <li key={id}>
               <Link to={`/snacks/${id}`}>{name}</Link>
               ❤️
             </li>
