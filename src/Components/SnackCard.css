@@ -19,6 +19,10 @@
     grid-column: 2;
 }
 
+.index-fav-delete span:last-child:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 360px){
     .snack-details, .index-fav-delete {
         display: none;

@@ -27,7 +27,6 @@ export default function SnacksIndex() {
     else {
       setSearchResult(filteredSnacks)
     }
-    
   }
 
   function handleSearch (e) {
@@ -41,9 +40,12 @@ export default function SnacksIndex() {
     const value = e.target.value
     setRadio(value)
     const healthy = value === "healthy" ? true : false
-    if(value){
+    if(value && !search){
       const healthyfilter = snacks.filter(({is_healthy}) => is_healthy === healthy )
       setSearchResult(healthyfilter)
+    }
+    else if(search && value){
+      // code later
     }
     else {
       setSearchResult(snacks)
@@ -52,7 +54,7 @@ export default function SnacksIndex() {
 
 
   useEffect(() => {
-
+   
   }, [snacks.length])
   
   return (

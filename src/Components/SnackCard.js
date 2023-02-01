@@ -13,7 +13,7 @@ export default function SnackCard({snack, setSearchResult, setSearch}) {
             const newSnacks = snacks.filter(({id}) => idValue !== id)
             setSnacks(newSnacks)
             setSearch("")
-            setSearchResult(snacks)
+            setSearchResult(newSnacks)
         })
         .catch(err => console.log(err))
     }
@@ -40,8 +40,7 @@ export default function SnackCard({snack, setSearchResult, setSearch}) {
         {/* favorite / delete */}
         <section className="index-fav-delete">
             <span>check</span>
-            <span>
-                <button onClick={(event) => handleDelete(event)}>Delete</button>
+            <span onClick={(event) => handleDelete(event)}>🗑️
             </span>
         </section>
        </>
