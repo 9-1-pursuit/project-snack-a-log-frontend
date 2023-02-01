@@ -1,5 +1,4 @@
 nav {
-  background-color: blue;
   background: linear-gradient(
     to right,
     #e62d21,
@@ -15,8 +14,12 @@ nav {
 nav a {
   padding-top: 20px;
   text-decoration: none;
-  color: orangered;
+  color: rgb(239, 235, 235);
   font-size: 24px;
+}
+
+nav a:hover {
+  color: orangered;
 }
 nav a img {
   margin-bottom: 15px;

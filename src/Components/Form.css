@@ -50,7 +50,7 @@ form #form-icon div {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
-form #form-icon #health-icon{
+form #form-icon #health-icon {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -65,15 +65,14 @@ form #form-icon #health-icon h3 {
   color: maroon;
 }
 
-
 label {
   font-size: 18px;
 }
 .form form input,
 textarea {
   font-size: 16px;
-  border-radius: 10px;
-  border: 1px solid salmon;
+  /* border-radius: 10px;
+  border: 1px solid salmon; */
 }
 
 #submit-button {

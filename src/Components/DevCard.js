@@ -7,10 +7,7 @@ const DevCard = ({ dev }) => {
 
   return (
     <article>
-      {/* salina edit */}
       <img className="photo" src={imageURL}></img>
-      {/* <img className="photo" src="https://media.licdn.com/dms/image/D4E03AQFkEebiIKvXxg/profile-displayphoto-shrink_400_400/0/1675282522860?e=1680739200&v=beta&t=wedvJGDTOD_REGGs8ylev-C3J0eVsBi-UEPbSs4em2w"></img> */}
-
       <div className="dev-content">
         <h3>{name}</h3>
         <p>{description}</p>
