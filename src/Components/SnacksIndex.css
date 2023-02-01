@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     column-gap: 10px;
+    padding-bottom: 20%;
 }
 .index-header {
     grid-column: span 3;
@@ -19,7 +20,7 @@
     border-radius: 10px;
 }
 
-.index a:last-child {
+.index .add-button {
     display: none;
 }
 
@@ -44,7 +45,18 @@
 
 .index aside {
     border: 2px solid black;
-    height: 80vh;
+    
+}
+
+.index-right {
+    display: grid;
+    justify-items: center;
+    list-style: none;
+    overflow-y: scroll;
+}
+
+.index-right h5 {
+    margin: 0;
 }
 
 
@@ -61,17 +73,26 @@ footer {
 
 /* Mobile view  */
 @media (max-width:360px){
+    .index {
+        grid-template-columns: 1fr;
+        max-height: 780px;
+        overflow-y: scroll;
+    }
     .index h2 {
     background-color: purple;
     color: orangered;
     border: 1px solid orangered;
     }
-    .index a img {
+    .index .add-button {
+        display: unset;
+    }
+    .index a:last-child img {
+        display: unset;
         height: 60px;
         position: fixed;
         z-index: 500;
-        left: 36%;
-        top: 75%;
+        left: 45%;
+        top: 87%;
         border-radius: 50%;
     }
     .index-snack {
@@ -83,7 +104,7 @@ footer {
         height: 150px;
         border-radius: 10px;
     }
-    .index aside {
+    .index aside, .index-header {
         display: none;
     }
     

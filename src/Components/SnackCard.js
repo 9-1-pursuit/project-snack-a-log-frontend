@@ -6,14 +6,15 @@ export default function SnackCard({snack}) {
 
     return(
        <>
-        <div className="container">
-            <img src={image} alt={name} />
-            <div className="middle">
-                <div className="text">{name}</div>
+        <Link to={`/snacks/${id}`}>
+            <div className="container">
+                <img src={image} alt={name} />
+                <div className="middle">
+                    <div className="text">{name}</div>
+                </div>
             </div>
-        </div>
+        </Link>
        
-        
         <section className="snack-details">
         <Link to={`/snacks/${id}`}>
             <p>{name}</p>

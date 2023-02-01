@@ -7,33 +7,31 @@ import "./SnacksIndex.css";
 export default function SnacksIndex() {
   const { snacks, setSnacks } = useContextProvider();
   const [search, setSearch] = useState("")
-  const [searchResult, setSearchResult] = useState([...snacks])
-  
-  
-  // function filterSearch(string, objArr) {
+  const [searchResult, setSearchResult] = useState([])
+  const data = searchResult.length > 0 || search ? [...searchResult] : [...snacks]
 
-  //   const filteredSnacks = objArr.filter(({name}) => {
-  //     const input = string.toLowerCase().split(` `).join(``)
-  //     const snackName = name.toLowerCase().split(` `).join(``)
+  
+  function filterSearch(string, objArr) {
+    const filteredSnacks = objArr.filter(({name}) => {
+      const input = string.toLowerCase().split(` `).join(``)
+      const snackName = name.toLowerCase().split(` `).join(``)
       
-  //     if(input === " ") return objArr
-  //     else { return snackName.includes(input) }
-  //   })
-  //   console.log(filteredSnacks)
-  //   setSearchResult(filteredSnacks)
-  // }
+      if(input === "") return objArr
+      else { return snackName.includes(input) }
+    })
+    setSearchResult(filteredSnacks)
+  }
 
-  // function handleSearch (e) {
-  //   const value = e.target.value
-  //   setSearch(value)
-
-  //   // setSnacks(filterSearch(value, snacks))
-  //   filterSearch(value, searchResult)
-  // }
+  function handleSearch (e) {
+    const value = e.target.value
+    setSearchResult([...snacks])
+    setSearch(value)
+    filterSearch(value, [...snacks])
+  }
 
   useEffect(() => {
-    setSearchResult([...snacks])
-  },[])
+
+  }, [snacks.length])
   
   return (
     <div className="index">
@@ -41,7 +39,7 @@ export default function SnacksIndex() {
         <h2>Snacks</h2>
 
          {/* searchbar */}
-         {/* <label htmlFor="searchbar">Search Snacks: {" "}
+         <label htmlFor="searchbar">Search Snacks: {" "}
           <input
           id = "searchbar"
           type= "text"
@@ -49,7 +47,7 @@ export default function SnacksIndex() {
           value={search}
           onChange ={(event) => {handleSearch(event)}}
           />
-        </label> */}
+        </label>
 
       </section>
 
@@ -61,7 +59,7 @@ export default function SnacksIndex() {
       {/* snack details */}
       <section className="index-snack">
         {
-          snacks.map(snack => 
+          data.map(snack => 
           <SnackCard 
           key={snack.id}
           snack={snack} />)
@@ -70,12 +68,21 @@ export default function SnacksIndex() {
 
       {/* aside 2 for misc data */}
       <aside className="index-right">
-        <h3>Misc.</h3>
+        <h5>Current Snacks</h5>
+        {
+          snacks.map(({name, id}) => 
+          <Link 
+          key = {id}
+          to={`/snacks/${id}`}>
+            <li>{name}</li>
+          </Link>)
+        }
       </aside>
 
       {/* add (+) botton/icon/link */}
       <Link to="/snacks/new">
-        <img src="https://www.pngkey.com/png/detail/136-1362850_this-free-icons-png-design-of-plus-icon.png" alt="plus-sign" />
+        <img src="https://www.pngkey.com/png/detail/136-1362850_this-free-icons-png-design-of-plus-icon.png" alt="plus-sign"
+        className="add-button" />
       </Link>
     </div>
   );
