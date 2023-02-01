@@ -59,6 +59,11 @@
     margin: 0;
 }
 
+.radio {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 
 
 

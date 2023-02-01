@@ -14,7 +14,6 @@ export default function SnackCard({snack, setSearchResult, setSearch}) {
             setSnacks(newSnacks)
             setSearch("")
             setSearchResult(snacks)
-
         })
         .catch(err => console.log(err))
     }

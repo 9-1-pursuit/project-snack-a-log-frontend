@@ -8,9 +8,9 @@ export default function SnacksIndex() {
   const { snacks, setSnacks } = useContextProvider();
   const [search, setSearch] = useState("")
   const [searchResult, setSearchResult] = useState([])
+  const [radio, setRadio] = useState("")
   const data = searchResult.length > 0 || search ? [...searchResult] : [...snacks]
 
-  
   function filterSearch(string, objArr) {
     const filteredSnacks = objArr.filter(({name}) => {
       const input = string.toLowerCase().split(` `).join(``)
@@ -28,6 +28,12 @@ export default function SnacksIndex() {
     setSearch(value)
     filterSearch(value, [...snacks])
   }
+
+  function handleRadio(e) {
+    const value = e.target.value
+    setRadio(value)
+  }
+
 
   useEffect(() => {
 
@@ -48,6 +54,45 @@ export default function SnacksIndex() {
           onChange ={(event) => {handleSearch(event)}}
           />
         </label>
+        {/* radio buttons */}
+        <section className="radio">
+        <label htmlFor="healthy">
+            <input
+            type="radio"
+            id="healthy"
+            name="radio-button"
+            checked={radio === "healthy" ? true : false}
+            value="healthy"
+            onChange={(event) =>handleRadio(event)}
+            />
+            {" "}Healthy
+        </label>
+
+        <label htmlFor="unhealthy">
+            <input
+            type="radio"
+            id="unhealthy"
+            name="radio-button"
+            checked={radio === "unhealthy" ? true : false}
+            value="unhealthy"
+            onChange={(event) =>handleRadio(event)}
+            />
+            {" "}Unhealthy
+        </label>
+
+        <label htmlFor="showAll">
+            <input
+            type="radio"
+            id="showAll"
+            name="radio-button"
+            checked={radio === "" ? true : false}
+            value=""
+            onChange={(event) =>handleRadio(event)}
+            />
+            {" "}Show All
+        </label>
+        </section>
+
 
       </section>
 
