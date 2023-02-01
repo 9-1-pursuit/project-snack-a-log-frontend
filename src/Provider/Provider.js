@@ -14,10 +14,9 @@ export default function Provider({ children }) {
 
   useEffect(() => {
     // console.log("Provider's useEffect")
-    axios
-      .get(`${API}/snacks`)
-      .then((resp) => setSnacks(resp.data))
-      .catch((error) => console.log(error));
+    axios.get(`${API}/snacks`)
+    .then((resp) => setSnacks(resp.data))
+    .catch((error) => console.log(error));
   }, []);
 
   return (
