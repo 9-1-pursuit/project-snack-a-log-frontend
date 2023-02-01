@@ -70,7 +70,7 @@ export default function Form() {
 
       <form onSubmit={handleSubmit}>
         <div id="form-img">
-          <img src={snack.image} />
+          <img src={snack.image} alt="snack image"/>
           <div>
             <label htmlFor="name">Name:</label>
             <input
@@ -137,7 +137,7 @@ export default function Form() {
             />
           </div>
           <div id="health-icon">
-            <img src={isHealthy ? Solid : Outline} />
+            <img src={isHealthy ? Solid : Outline} alt="health icon"/>
             <h3>{isHealthy ? "healthy" : "unhealthy"}</h3>
           </div>
         </div>

@@ -8,6 +8,7 @@ import About from "../Pages/About.js";
 import FourOFour from "../Pages/FourOFour.js";
 
 export default function RouteComponent() {
+  // const hidden = true;
   return (
     <Routes>
       <Route path="/" element={<Home />} />
