@@ -33,7 +33,11 @@ export default function SnackShow() {
   return (
     <>
       <article className="snack-info">
-        <h1>{snack.name}</h1>
+        <h1>
+          <strong>
+            <b>{snack.name}</b>
+          </strong>
+        </h1>
         <div className="snackInfo">
           <img className="snack-img" src={snack.image} alt="snack-image" />
           <div className="snack-text">
@@ -45,27 +49,27 @@ export default function SnackShow() {
             </h5>
             <h5>
               <strong>
-                <b>Fiber: </b>
+                <b>Fiber (g): </b>
               </strong>
-              {snack.fiber} grams
+              {snack.fiber}
             </h5>
             <h5>
               <strong>
-                <b>Protein: </b>
+                <b>Protein (g): </b>
               </strong>
-              {snack.protein} grams
+              {snack.protein}
             </h5>
             <h5>
               <strong>
-                <b>Carbs: </b>
+                <b>Carbs (g): </b>
               </strong>
-              {snack.carbs} grams
+              {snack.carbs}
             </h5>
             <h5>
               <strong>
-                <b>Added Sugar: </b>
+                <b>Added Sugar (g): </b>
               </strong>
-              {snack.added_sugar} grams
+              {snack.added_sugar}
             </h5>
             <h5>
               <strong>

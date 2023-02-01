@@ -1,0 +1,17 @@
+.dark {
+  color: #fff;
+  background-color: #333;
+}
+.light {
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+}
+
+.toggleTheme {
+  /* all: unset; */
+}
+
+.toggleButton {
+  height: 100px;
+  width: 100px;
+}
