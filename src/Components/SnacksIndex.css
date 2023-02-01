@@ -5,9 +5,13 @@
     grid-template-columns: 1fr 3fr 1fr;
     column-gap: 10px;
 }
-
-.index h2{
+.index-header {
     grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.index-header h2{
     width: fit-content;
     margin: 0;
     margin-bottom: 10px;
