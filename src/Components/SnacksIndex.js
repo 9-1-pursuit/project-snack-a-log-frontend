@@ -19,7 +19,15 @@ export default function SnacksIndex() {
       if(input === "") return objArr
       else { return snackName.includes(input) }
     })
-    setSearchResult(filteredSnacks)
+    if(radio){
+      const healthy = radio === "healthy" ? true : false
+      const healthyfilter = filteredSnacks.filter(({is_healthy}) => is_healthy === healthy )
+      setSearchResult(healthyfilter)
+    }
+    else {
+      setSearchResult(filteredSnacks)
+    }
+    
   }
 
   function handleSearch (e) {
@@ -39,8 +47,7 @@ export default function SnacksIndex() {
     }
     else {
       setSearchResult(snacks)
-    }
-    
+    }  
   }
 
 
@@ -52,7 +59,7 @@ export default function SnacksIndex() {
     <div className="index">
       <section className="index-header">
         <h2>Snacks</h2>
-
+        <div className="search">
          {/* searchbar */}
          <label htmlFor="searchbar">Search Snacks: {" "}
           <input
@@ -101,13 +108,13 @@ export default function SnacksIndex() {
             {" "}Show All
         </label>
         </section>
-
+        </div>
 
       </section>
 
       {/* aside1 can be dead space for pop up menu */}
       <aside className="index-left">
-        <h3>Misc.</h3>
+        <h5>Misc.</h5>
       </aside>
       
       {/* snack details */}
@@ -124,7 +131,7 @@ export default function SnacksIndex() {
 
       {/* aside 2 for snacks list */}
       <aside className="index-right">
-        <h5>Current Snacks</h5>
+      <h5>Current Snacks</h5>
         {
           snacks.map(({name, id}) => 
           <Link 

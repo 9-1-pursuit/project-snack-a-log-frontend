@@ -1,6 +1,6 @@
 .index{
     width: 95%;
-    margin-top: 3%;
+    margin-top: 1%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     column-gap: 10px;
@@ -9,7 +9,8 @@
 .index-header {
     grid-column: span 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 25% 50% 25%;
+    margin-bottom: 2%;
 }
 
 .index-header h2{
@@ -31,24 +32,34 @@
 
 .index-snack {
     grid-column: 2;
+    padding: 5% 0;
     width: 100%;
     display: grid;
     grid-template-columns: .4fr .5fr .2fr ;
     grid-template-rows: auto;
-    max-height: 100vh;
+    max-height: 80vh;
     overflow-y: scroll;
+    
 }
 .index-snack img {
     height: 150px;
     max-width: 150px;
 }
 
-.index aside {
-    border: 2px solid black;
-    
+.search{
+    grid-column: 2;
+    text-align: center;
+}
+#searchbar {
+    width: 90%;
 }
 
-.index-right {
+.index aside {
+    border: 2px solid black;
+    height: 90vh;
+}
+
+.index-right{
     display: grid;
     justify-items: center;
     list-style: none;
