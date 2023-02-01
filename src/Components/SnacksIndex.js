@@ -1,167 +1,200 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
-import SnackCard from "./SnackCard.js"
+import SnackCard from "./SnackCard.js";
 import "./SnacksIndex.css";
 
 export default function SnacksIndex() {
   const { snacks, setSnacks } = useContextProvider();
-  const [search, setSearch] = useState("")
-  const [searchResult, setSearchResult] = useState([])
-  const [radio, setRadio] = useState("")
-  const [favorite, setFavorite] = useState([])
-  const data = searchResult.length > 0 || search ? [...searchResult] : [...snacks]
+  const [search, setSearch] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [radio, setRadio] = useState("");
+  const [favorite, setFavorite] = useState([]);
+  const data =
+    searchResult.length > 0 || search ? [...searchResult] : [...snacks];
 
   function filterSearch(string, objArr) {
-    const filteredSnacks = objArr.filter(({name}) => {
-      const input = string.toLowerCase().split(` `).join(``)
-      const snackName = name.toLowerCase().split(` `).join(``)
-      
-      if(input === "") return objArr
-      else { return snackName.includes(input) }
-    })
-    if(radio){
-      const healthy = radio === "healthy" ? true : false
-      const healthyfilter = filteredSnacks.filter(({is_healthy}) => is_healthy === healthy )
-      setSearchResult(healthyfilter)
-    }
-    else {
-      setSearchResult(filteredSnacks)
+    const filteredSnacks = objArr.filter(({ name }) => {
+      const input = string.toLowerCase().split(` `).join(``);
+      const snackName = name.toLowerCase().split(` `).join(``);
+
+      if (input === "") return objArr;
+      else {
+        return snackName.includes(input);
+      }
+    });
+    if (radio) {
+      const healthy = radio === "healthy" ? true : false;
+      const healthyfilter = filteredSnacks.filter(
+        ({ is_healthy }) => is_healthy === healthy
+      );
+      setSearchResult(healthyfilter);
+    } else {
+      setSearchResult(filteredSnacks);
     }
   }
 
-  function handleSearch (e) {
-    const value = e.target.value
-    setSearchResult([...snacks])
-    setSearch(value)
-    filterSearch(value, [...snacks])
+  function handleSearch(e) {
+    const value = e.target.value;
+    setSearchResult([...snacks]);
+    setSearch(value);
+    filterSearch(value, [...snacks]);
   }
 
   function handleRadio(e) {
-    const value = e.target.value
-    setRadio(value)
-    const healthy = value === "healthy" ? true : false
-    if(value && !search){
-      const healthyfilter = snacks.filter(({is_healthy}) => is_healthy === healthy )
-      setSearchResult(healthyfilter)
+    const value = e.target.value;
+    setRadio(value);
+    const healthy = value === "healthy" ? true : false;
+    if (value && !search) {
+      const healthyfilter = snacks.filter(
+        ({ is_healthy }) => is_healthy === healthy
+      );
+      setSearchResult(healthyfilter);
+    } else if (search) {
+      const healthyfilter = searchResult.filter(
+        ({ is_healthy }) => is_healthy === healthy
+      );
+      setSearchResult(healthyfilter);
+    } else {
+      setSearchResult(snacks);
     }
-    else if(search){
-      const healthyfilter = searchResult.filter(({is_healthy}) => is_healthy === healthy)
-      setSearchResult(healthyfilter)
-    }
-    else {
-      setSearchResult(snacks)
-    }  
   }
 
+  useEffect(() => {}, [snacks.length, favorite.length]);
 
-  useEffect(() => {
-   
-  }, [snacks.length, favorite.length])
-  
   return (
     <div className="index">
       <section className="index-header">
         <h2>Snacks</h2>
         <div className="search">
-         {/* searchbar */}
-         <label htmlFor="searchbar">Search Snacks: {" "}
-          <input
-          id = "searchbar"
-          type= "text"
-          placeholder='Search Snacks'
-          value={search}
-          onChange ={(event) => {handleSearch(event)}}
-          />
-        </label>
-        {/* radio buttons */}
-        <section className="radio">
-        <label htmlFor="healthy">
+          {/* searchbar */}
+          <label htmlFor="searchbar">
+            Search Snacks:{" "}
             <input
-            type="radio"
-            id="healthy"
-            name="radio-button"
-            checked={radio === "healthy" ? true : false}
-            value="healthy"
-            onChange={(event) =>handleRadio(event)}
+              id="searchbar"
+              type="text"
+              placeholder="Search Snacks"
+              value={search}
+              onChange={(event) => {
+                handleSearch(event);
+              }}
             />
-            {" "}Healthy
-        </label>
+          </label>
+          {/* radio buttons */}
+          <section className="radio">
+            <label htmlFor="healthy">
+              <input
+                type="radio"
+                id="healthy"
+                name="radio-button"
+                checked={radio === "healthy" ? true : false}
+                value="healthy"
+                onChange={(event) => handleRadio(event)}
+              />{" "}
+              Healthy
+            </label>
 
-        <label htmlFor="unhealthy">
-            <input
-            type="radio"
-            id="unhealthy"
-            name="radio-button"
-            checked={radio === "unhealthy" ? true : false}
-            value="unhealthy"
-            onChange={(event) =>handleRadio(event)}
-            />
-            {" "}Unhealthy
-        </label>
+            <label htmlFor="unhealthy">
+              <input
+                type="radio"
+                id="unhealthy"
+                name="radio-button"
+                checked={radio === "unhealthy" ? true : false}
+                value="unhealthy"
+                onChange={(event) => handleRadio(event)}
+              />{" "}
+              Unhealthy
+            </label>
 
-        <label htmlFor="showAll">
-            <input
-            type="radio"
-            id="showAll"
-            name="radio-button"
-            checked={radio === "" ? true : false}
-            value=""
-            onChange={(event) =>handleRadio(event)}
-            />
-            {" "}Show All
-        </label>
-        </section>
+            <label htmlFor="showAll">
+              <input
+                type="radio"
+                id="showAll"
+                name="radio-button"
+                checked={radio === "" ? true : false}
+                value=""
+                onChange={(event) => handleRadio(event)}
+              />{" "}
+              Show All
+            </label>
+          </section>
         </div>
-
       </section>
 
       {/* aside1 can be dead space for pop up menu */}
       <aside className="index-left">
-        <h5>Current Snacks</h5>
-          {
-            snacks.map(({name, id}) => 
-            <Link 
-            key = {id}
-            to={`/snacks/${id}`}>
-              <li>{name}</li>
-            </Link>)
-          }
+        <div className="fiber">
+          <h5>High in Fiber:</h5>
+          {snacks.map(({ fiber, name, id }) => {
+            if (+fiber > 15) {
+              return (
+                <Link key={id} to={`/snacks/${id}`}>
+                  <li>{name}</li>
+                </Link>
+              );
+            }
+          })}
+        </div>
+        <div className="fiber">
+          <h5>High In Protein</h5>
+          {snacks.map(({ protein, name, id }) => {
+            if (+protein > 20) {
+              return (
+                <Link key={id} to={`/snacks/${id}`}>
+                  <li>{name}</li>
+                </Link>
+              );
+            }
+          })}
+        </div>
+        <div className="fiber">
+          <h5>High In Sugar</h5>
+          {snacks.map(({ added_sugar, name, id }) => {
+            if (+added_sugar > 10) {
+              return (
+                <Link key={id} to={`/snacks/${id}`}>
+                  <li>{name}</li>
+                </Link>
+              );
+            }
+          })}
+        </div>
       </aside>
-      
+
       {/* snack details */}
       <section className="index-snack">
-        {
-          data.map(snack => 
-          <SnackCard 
-          key={snack.id}
-          snack={snack}
-          setSearch={setSearch}
-          setSearchResult={setSearchResult}
-          favorite={favorite}
-          setFavorite={setFavorite} />)
-        }
+        {data.map((snack) => (
+          <SnackCard
+            key={snack.id}
+            snack={snack}
+            setSearch={setSearch}
+            setSearchResult={setSearchResult}
+            favorite={favorite}
+            setFavorite={setFavorite}
+          />
+        ))}
       </section>
 
       {/* aside 2 for snacks list */}
       <aside className="index-right">
         <h5>Favorites</h5>
-        {
-          favorite.map(({id, name}) => {
-           return <li>
-                  <Link to={`/snacks/${id}`}>
-                    {name}
-                  </Link>
-                  ❤️
-                </li>
-          })
-        }
+        {favorite.map(({ id, name }) => {
+          return (
+            <li>
+              <Link to={`/snacks/${id}`}>{name}</Link>
+              ❤️
+            </li>
+          );
+        })}
       </aside>
 
       {/* add (+) botton/icon/link */}
       <Link to="/snacks/new">
-        <img src="https://www.pngkey.com/png/detail/136-1362850_this-free-icons-png-design-of-plus-icon.png" alt="plus-sign"
-        className="add-button" />
+        <img
+          src="https://www.pngkey.com/png/detail/136-1362850_this-free-icons-png-design-of-plus-icon.png"
+          alt="plus-sign"
+          className="add-button"
+        />
       </Link>
     </div>
   );

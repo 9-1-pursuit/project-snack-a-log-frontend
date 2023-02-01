@@ -25,6 +25,11 @@
     display: none;
 }
 
+.index a {
+    color: rgb(7, 10, 186);
+    /* font-size: 20px; */
+}
+
 .index, .index h2 {
     margin-left: auto;
     margin-right: auto;
@@ -44,7 +49,7 @@
     overflow-y: scroll;
 
     /* to see */
-    background-color: coral;
+    background-color: orangered;
 }
 
 .index-snack img {
@@ -81,16 +86,40 @@
     overflow-y: scroll;
 }
 
+.index-left {
+    grid-template-rows: .8fr repeat(3, 1fr);
+    row-gap: 2%;
+}
+
 .index-right{
     grid-template-rows: 1fr repeat(10, .5fr);
 }
 .index-left h5, .index-right h5 {
     margin: 0;
     height: fit-content;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .index-right h5, .index-right li {
     height: fit-content;
+}
+
+.index-left .fiber {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.index-left .fiber li {
+   max-width: 10ch;
+   margin: 0;
+}
+.index-left h5:first-child {
+    margin-top: 10%;
+}
+.index-left h5 {
+    grid-column: span 2;
 }
 
 .radio {
