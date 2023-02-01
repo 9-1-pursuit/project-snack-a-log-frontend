@@ -1,20 +1,23 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
+import { useContextProvider } from "../Provider/Provider";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import SolidHeart from "../assets/heart-solid.png";
 import EmptyHeart from "../assets/heart-regular.png";
 import "./SnackShow.css";
 
 export default function SnackShow() {
+  const { API, axios } = useContextProvider();
   const [snack, setSnack] = useState([]);
   let { id } = useParams();
   let navigate = useNavigate();
-  const API = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then((res) => {
-      setSnack(res.data);
-    });
+    axios
+      .get(`${API}/snacks/${id}`)
+      .then((res) => {
+        setSnack(res.data);
+      })
+      .catch(() => navigate("/not-found"));
   }, [id, navigate]);
 
   const deleteSnack = () => {

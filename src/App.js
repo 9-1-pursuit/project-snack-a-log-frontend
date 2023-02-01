@@ -1,8 +1,8 @@
 import Provider from "./Provider/Provider";
 import RouteComponent from "./Components/RouteComponent";
 import { useState, useEffect } from "react";
-// import darkMode from "./assets/darkmode.png";
-// import lightMode from "./assets/lightmode.png";
+import darkMode from "./assets/darkmode.png";
+import lightMode from "./assets/lightmode.png";
 import "./Components/darkMode.css";
 
 function App() {
@@ -24,14 +24,13 @@ function App() {
   return (
     <div className={`App ${theme}`}>
       <Provider>
-        {/* <button className="toggleTheme" onClick={toggleTheme}> */}
-        {/* Toggle */}
-        {/* {theme === "light" ? (
+        {/* <button className="toggleTheme" onClick={toggleTheme}>
+          {theme === "light" ? (
             <img className="toggleButton" src={darkMode} alt="dm" />
           ) : (
             <img className="toggleButton" src={lightMode} alt="lm" />
-          )} */}
-        {/* </button> */}
+          )}
+        </button> */}
         <RouteComponent />
       </Provider>
     </div>
