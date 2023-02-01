@@ -89,16 +89,18 @@ export default function SnackShow() {
         <div className="buttons">
           <div>
             <Link to={`/snacks`}>
-              <button>Back</button>
+              <button className="navButtons">Back</button>
             </Link>
           </div>
           <div>
             <Link to={`/snacks/${id}/edit`}>
-              <button>Edit</button>
+              <button className="navButtons">Edit</button>
             </Link>
           </div>
           <div>
-            <button onClick={handleDelete}>Delete</button>
+            <button className="navButtons" onClick={handleDelete}>
+              Delete
+            </button>
           </div>
         </div>
       </article>
