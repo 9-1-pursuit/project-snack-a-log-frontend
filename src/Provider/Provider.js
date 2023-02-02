@@ -12,20 +12,20 @@ export function useContextProvider() {
 export default function Provider({ children }) {
   const API = process.env.REACT_APP_API_URL;
   const [snacks, setSnacks] = useState([]);
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [hidden, setHidden] = useState(true);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
     // document.body.className = theme;
   }, [theme]);
 
-
   useEffect(() => {
     // console.log("Provider's useEffect")
-    axios.get(`${API}/snacks`)
-    .then((resp) => setSnacks(resp.data))
-    .catch((error) => console.log(error));
+    axios
+      .get(`${API}/snacks`)
+      .then((resp) => setSnacks(resp.data))
+      .catch((error) => console.log(error));
   }, []);
 
   return (
@@ -36,7 +36,9 @@ export default function Provider({ children }) {
         snacks,
         setSnacks,
         theme,
-        setTheme
+        setTheme,
+        hidden,
+        setHidden
       }}
     >
       <Nav />

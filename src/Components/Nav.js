@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider";
 import Logo from "../assets/heart-solid.png";
+import snax from "../assets/logo.png"
 import darkMode from "../assets/darkmode.png";
 import lightMode from "../assets/lightmode.png";
 import "./Nav.css";
@@ -18,11 +19,11 @@ export default function Nav() {
   return (
     <nav>
       <Link to="/">
-        <img src={Logo} alt="logo" height="40px" />
+        <img src="https://cdn-icons-png.flaticon.com/512/2553/2553691.png" alt="logo" height="45px" />
       </Link>
-      <Link to="/snacks">Snack-A-Log</Link>
+      <Link to="/snacks">Snax</Link>
       <Link to="/snacks/new">New Snack</Link>
-      <Link to="/About">About</Link>
+      <Link to="/about">About</Link>
       <button className="toggleTheme" onClick={toggleTheme}>
         {theme === "light" ? (
           <img className="toggleButton" src={lightMode} alt="lm" />

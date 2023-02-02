@@ -8,7 +8,7 @@ import "./Form.css";
 export default function Form() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { axios, API } = useContextProvider();
+  const { axios, API, setHidden } = useContextProvider();
   const [isHealthy, setIsHealthy] = useState(false);
   const [modal, setModal] = useState(false);
   const [snack, setSnack] = useState({
@@ -38,15 +38,21 @@ export default function Form() {
     }
   }, [snack.fiber, snack.protein, snack.added_sugar]);
 
+  useEffect(()=>{if (snack.name === "d3v$f4v$") {
+    setHidden(false);
+    setModal(true);
+  } }, [snack.name])
+
   const handleChange = (event) => {
     setSnack({ ...snack, [event.target.id]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (snack.name === "d3v$f4v$") {
-      setModal(true);
-    } else if (id) {
+    // if (snack.name === "d3v$f4v$") {
+    //   setModal(true);
+    // } else 
+    if (id) {
       axios
         .put(`${API}/snacks/${id}`, snack)
         .then(navigate(`/snacks/${id}`))
@@ -61,7 +67,7 @@ export default function Form() {
 
   const proceed = () => {
     setModal(false);
-    navigate("/");
+    navigate("/d3v$f4v$");
   };
 
   return (

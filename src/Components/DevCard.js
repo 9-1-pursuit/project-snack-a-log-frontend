@@ -1,5 +1,8 @@
 import React from "react";
 // import { Button } from 'react-bootstrap'
+import github from "../assets/github.png"
+import linkedin from "../assets/linkedin.png"
+import emailImg from "../assets/email.png"
 import "./DevCard.css";
 
 const DevCard = ({ dev }) => {
@@ -14,16 +17,15 @@ const DevCard = ({ dev }) => {
       </div>
       <div className="dev-buttons">
         <a href={githubURL}>
-          <button variant="primary">Github</button>
+          <button variant="primary"><img src={github} alt="github" /></button>
         </a>
         <a href={indeedURL}>
           <button href={indeedURL} variant="primary">
-            LinkedIn
-          </button>
+            <img src={linkedin} alt="linkedin" /></button>
         </a>
         <a href={email}>
           <button href={email} variant="primary">
-            Email
+            <img id="email-img"src={emailImg} alt="email" />
           </button>
         </a>
       </div>

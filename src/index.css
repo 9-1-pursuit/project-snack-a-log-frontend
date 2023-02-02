@@ -55,3 +55,27 @@ a:hover {
 h5 {
   color: #003873;
 }
+
+#home {
+  height: 100vh;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+#home img {
+  padding-top: 20px;
+}
+
+#home p {
+  font-size: 22px;
+  border: 3px solid #2283e6;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 24px;
+  background-color: lightsalmon;
+  padding: 30px 10px;
+}
+
+#home p #hint {
+ color: #003873;
+}

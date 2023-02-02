@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useContextProvider } from "../Provider/Provider.js";
 import Home from "../Pages/Home.js";
 import Index from "../Pages/Index.js";
 import Show from "../Pages/Show.js";
@@ -8,7 +9,7 @@ import About from "../Pages/About.js";
 import FourOFour from "../Pages/FourOFour.js";
 
 export default function RouteComponent() {
-  // const hidden = true;
+  const { hidden } = useContextProvider();
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -18,8 +19,8 @@ export default function RouteComponent() {
       <Route path="/snacks/new" element={<New />} />
       <Route path="/about" element={<About />} />
       <Route path="/not-found" element={<FourOFour />} />
-      {/* {hidden?<></>:<Route path="d3v$f4v$" element={<h1>HIDDEN PAGE</h1>} />} */}
-      <Route path="*" element={<Navigate to="not-found" />} />
+      {hidden?<></>:<Route path="/d3v$f4v$" element={<h1>HIDDEN PAGE</h1>} />}
+      <Route path="*" element={<Navigate to="/not-found" />} />
     </Routes>
   );
 }
