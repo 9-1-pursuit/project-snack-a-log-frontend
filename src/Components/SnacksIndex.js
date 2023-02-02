@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
+import {FaHeart} from "react-icons/fa"
+import { WiStars } from "react-icons/wi"
 import SnackCard from "./SnackCard.js";
 import "./SnacksIndex.css";
 
@@ -65,11 +67,17 @@ export default function SnacksIndex() {
   return (
     <div className="index">
       <section className="index-header">
-        <h2>Snacks</h2>
+        <img 
+        className="cat-gif" 
+        src="https://i.pinimg.com/originals/75/92/9c/75929ccf9a403ec6405c0adbd8fc2977.gif" 
+        alt="snacking"/>
+        <img 
+        className="cat-gif" 
+        src="https://i.postimg.cc/653ytWF5/cat-snack.gif" 
+        alt="snacking" />
+        
         <div className="search">
           {/* searchbar */}
-          <label htmlFor="searchbar">
-            Search Snacks:{" "}
             <input
               id="searchbar"
               type="text"
@@ -79,7 +87,7 @@ export default function SnacksIndex() {
                 handleSearch(event);
               }}
             />
-          </label>
+       
           {/* radio buttons */}
           <section className="radio">
             <label htmlFor="healthy">
@@ -121,6 +129,7 @@ export default function SnacksIndex() {
         </div>
       </section>
 
+
       {/* aside1 can be dead space for pop up menu */}
       <aside className="index-left">
         <div className="fiber">
@@ -129,7 +138,7 @@ export default function SnacksIndex() {
             if (+fiber > 15) {
               return (
                 <Link key={id} to={`/snacks/${id}`}>
-                  <li>{name}</li>
+                  <li><span>{name}</span></li>
                 </Link>
               );
             }
@@ -175,9 +184,10 @@ export default function SnacksIndex() {
         ))}
       </section>
 
-      {/* aside 2 for snacks list */}
+      {/* aside 2 for favorites list */}
       <aside className="index-right">
-        <h5>Favorites</h5>
+        <h5><span>Favorites</span> <WiStars color={"gold"} size={"30px"} /></h5>
+        
         {favorite.map(({ id, name }) => {
           return (
             <li key={id}>

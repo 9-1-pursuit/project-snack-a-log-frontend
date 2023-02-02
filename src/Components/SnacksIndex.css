@@ -1,10 +1,10 @@
 .index {
-  width: 95%;
-  /* salina's edit */
-  /* margin-top: 1%; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
   display: grid;
-  grid-template-columns: 1.5fr 2.5fr 1.5fr;
-  column-gap: 10px;
+  grid-template-columns: .4fr 1fr .6fr;
+  grid-template-rows: .2fr .5fr .5fr;
   padding-bottom: 20%;
 }
 
@@ -15,115 +15,98 @@
   border-radius: 24px;
   border: 3px solid #2283e6;
 }
+
 .index-header {
   grid-column: span 3;
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
-  margin-bottom: 2%;
-}
-
-.index-header h2 {
-  width: fit-content;
-  margin: 0;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.index .add-button {
-  display: none;
-}
-
-.index a {
-  /* color: rgb(7, 10, 186); */
-  /* font-size: 20px; */
-}
-
-.index,
-.index h2 {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.index-snack {
-  grid-column: 2;
-  padding: 5% 0;
+  justify-self: center;
   width: 100%;
   display: grid;
-  grid-template-columns: 0.3fr 0.4fr 0.3fr;
+  grid-template-columns: 5% 10% 35% 35% 10% 5%;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.cat-gif {
+  grid-column: 1;
+  height: 75px;
+  justify-self: left;
+  grid-row: 1;
+}
+
+.cat-gif:nth-child(2){
+  grid-column: 6;
+  justify-self: right;
+}
+
+.search {
+  grid-column: 3/5;
+  text-align: center;
+}
+#searchbar {
+  width: 75%;
+}
+
+/* snacks list */
+.index-snack {
+  grid-column: 1/3;
+  padding: 5% 0;
+  width: 80%;
+  justify-self: center;
+  position: relative;
+  right: 30px;
+  display: grid;
+  grid-template-columns: .6fr .8fr .3fr;
   grid-template-rows: auto;
   row-gap: 4px;
   justify-items: center;
   height: fit-content;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: scroll;
-  /* salina's edit */
-  border-radius: 20px;
-  /* background-color: rgb(253, 122, 74); */
-  /* to see */
-  /* background-color: orangered; */
 }
 
 .index-snack img {
   height: 150px;
-  /* salina's edit */
-  /* max-width: 150px; */
   width: 150px;
   border-radius: 10px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.index-snack a {
-  width: fit-content;
-}
 
 .index-snack img:hover {
-  border: 2px solid lawngreen;
+  border: 2px solid #cde60b;
   transform: scale(1.1);
 }
 
-.search {
-  grid-column: 2;
-  text-align: center;
-}
-#searchbar {
-  width: 90%;
-}
-
-.index aside {
-  /* border: 10px solid black; */
-  max-height: 90vh;
-}
+/* .index-snack a {
+  width: fit-content;
+} */
 
 .index-left,
 .index-right {
   display: grid;
   justify-items: center;
   align-items: center;
-  list-style: none;
   overflow-y: scroll;
-  /* background-color: rgb(253, 122, 74); */
+  position: relative;
+  right: 70px;
+  width: 100%;
 }
 
-.index-left {
-  grid-template-rows: 0.8fr repeat(3, 1fr);
-  row-gap: 2%;
-}
-
-.index-right {
-  grid-template-rows: 1fr repeat(10, 0.5fr);
-}
 .index-left h5,
 .index-right h5 {
   margin: 0;
   height: fit-content;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.index-right h5,
-.index-right li {
-  height: fit-content;
+/* fiber/protein */
+.index-left {
+  grid-column: 3;
+  grid-row: 3;
+  grid-template-rows: auto;
+  padding-left: 5px;
+  height: 64vh;
 }
 
 .index-left .fiber {
@@ -131,16 +114,47 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  text-align: left;
 }
-.index-left .fiber li {
-  max-width: 10ch;
+
+.index-left .fiber  li {
   margin: 0;
 }
-.index-left h5:first-child {
-  margin-top: 10%;
+
+/* distance btw bullet point and text */
+.index-left .fiber li span {
+  position: relative;
+  left: -10px;
 }
+
 .index-left h5 {
   grid-column: span 2;
+  position: relative;
+  right: 35px;
+}
+
+.index-left .fiber a, .index-left .fiber a li {
+  width: 195px;
+}
+
+
+/* favorites */
+.index-right {
+  grid-template-rows: .3fr repeat(5, 0.5fr);
+  height: 35vh;
+  margin-bottom: 10px;
+}
+
+.index-right h5 {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.index-right h5 svg {
+  position: relative;
+  right: 13px;
+  animation: beat 1.5s linear infinite;
+
 }
 
 .radio {
@@ -148,6 +162,18 @@
   justify-content: space-evenly;
 }
 
+.index .add-button {
+  display: none;
+}
+
+@keyframes beat {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.2);
+  }
+}
 /* footer */
 footer {
   z-index: 100;

@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { useContextProvider } from "../Provider/Provider"
+import { FaThumbsUp, FaThumbsDown } from "react-icons/fa"
+import { IoNutritionSharp, IoTrashOutline } from "react-icons/io5"
+import { TbCandy } from "react-icons/tb"
 import "./SnackCard.css"
 
 export default function SnackCard({snack, setSearchResult, setSearch, favorite, setFavorite}) {
@@ -52,7 +55,7 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
             <p>{name}</p>
         </Link>
             <p>{description}</p>
-            <p>{is_healthy ? "✅" : "❌" }</p>
+            <p>{is_healthy ? <IoNutritionSharp color={"green"} size={"35px"}/> : <TbCandy color={"red"} size={"35px"}/> }</p>
         </section>
 
         {/* favorite / delete */}
@@ -65,7 +68,7 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
                 onChange={(event)=> handleCheckbox(event) }/>
             </span>
 
-            <span onClick={(event) => handleDelete(event)}>🗑️
+            <span onClick={(event) => handleDelete(event)}><IoTrashOutline color={"#2283e6"} size={"40px"}/>
             </span>
         </section>
        </>
