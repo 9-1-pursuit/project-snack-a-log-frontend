@@ -6,20 +6,18 @@ const API = process.env.REACT_APP_API_URL;
 
 function Snacks() {
   const [snacks, setSnacks] = useState([]);
-
   useEffect(() => {
     axios
       .get(`${API}/snacks`)
       .then((res) => setSnacks(res.data))
       .catch((err) => console.log(err));
   }, []);
-
   return (
-    <div classname="Snacks">
-      <ul>
+    <div className="Snacks">
+      <ul className="snacks " style={{ listStyle: "none " }}>
         {snacks.map((snack) => {
           return (
-            <li>
+            <li key={snack.id}>
               <Snack snack={snack} />
             </li>
           );
@@ -28,5 +26,4 @@ function Snacks() {
     </div>
   );
 }
-
 export default Snacks;

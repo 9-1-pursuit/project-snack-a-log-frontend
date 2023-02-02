@@ -11,7 +11,7 @@ import Show from "./Pages/Show";
 
 // COMPONENTS
 import NavBar from "./Components/NavBar";
-
+import "./app.css";
 
 function App() {
   return (
