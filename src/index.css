@@ -14,14 +14,6 @@
   /* font-size: large; */
 }
 
-.form,
-.snack-info,
-.index,
-.dev-container {
-  margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 50px;
-}
 
 .dark {
   /* color: #fff; */

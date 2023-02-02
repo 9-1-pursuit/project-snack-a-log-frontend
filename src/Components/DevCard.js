@@ -1,27 +1,32 @@
 import React from "react";
-// import { Button } from 'react-bootstrap'
 import github from "../assets/github.png"
 import linkedin from "../assets/linkedin.png"
 import emailImg from "../assets/email.png"
 import "./DevCard.css";
-import { useContextProvider } from "../Provider/Provider";
+
 
 const DevCard = ({ dev }) => {
-  const { imageURL, name, githubURL, indeedURL, email, description } = dev;
+  const { name, imageurl, githuburl, indeedurl, email, description } = dev;
+  console.log (name)
+  console.log (dev.name)
+  console.log(dev)
 
   return (
+    // <>
+    // <p>{name}</p>
+    // </>
     <article>
-      <img className="photo" src={imageURL}></img>
+      <img className="photo" src={imageurl}></img>
       <div className="dev-content">
         <h3>{name}</h3>
         <p>{description}</p>
       </div>
       <div className="dev-buttons">
-        <a href={githubURL}>
+        <a href={githuburl}>
           <button variant="primary"><img src={github} alt="github" /></button>
         </a>
-        <a href={indeedURL}>
-          <button href={indeedURL} variant="primary">
+        <a href={indeedurl}>
+          <button href={indeedurl} variant="primary">
             <img src={linkedin} alt="linkedin" /></button>
         </a>
         <a href={email}>
