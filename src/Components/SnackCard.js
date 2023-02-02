@@ -1,9 +1,12 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useContextProvider } from "../Provider/Provider"
-import { FaThumbsUp, FaThumbsDown } from "react-icons/fa"
+import { IconCheckbox } from "react-icon-checkbox"
+import { IconContext } from "react-icons";
+import { FaThumbsUp, FaThumbsDown, FaStar } from "react-icons/fa"
 import { IoNutritionSharp, IoTrashOutline } from "react-icons/io5"
 import { TbCandy } from "react-icons/tb"
+import { TbStarOff } from "react-icons/tb"
 import "./SnackCard.css"
 
 export default function SnackCard({snack, setSearchResult, setSearch, favorite, setFavorite}) {
@@ -23,21 +26,28 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
         .catch(err => console.log(err))
     }
 
-    function handleCheckbox(e) {
-        const idValue = e.target.value
+    function handleCheckbox() {
         setChecked(!checked)
-       
-        const exist = favorite.find(({id}) => +idValue === id)
-        
+        const exist = favorite.find(obj => +id === obj.id)
         if(!exist){
-         const favObj = snacks.find(({id}) => +idValue === id)
+         const favObj = snacks.find(obj=> +id === obj.id)
             setFavorite([...favorite, favObj ])
         }
         if(exist){
-            const removeFav = favorite.filter(({id}) => id !== +idValue)
+            const removeFav = favorite.filter(obj => obj.id !== +id)
             setFavorite(removeFav)
         }
     }
+    useEffect(() => {
+        axios.get(`${API}/favorites`)
+        .then(({data}) => {
+           
+            const isFav = data.find(obj => +obj.id === id)
+           if(Object.keys(isFav).length >0 ){
+            setChecked(true)
+           }
+        })
+    },[id])
 
     return(
        <>
@@ -61,11 +71,26 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
         {/* favorite / delete */}
         <section className="index-fav-delete">
             <span>
-                <input 
+
+            <IconCheckbox 
+                type = "checkbox"
+                checked = {checked}
+                checkedIcon={
+                    <IconContext.Provider value={{color: "gold", size: "40px"}}>
+                        <FaStar />
+                    </IconContext.Provider>}
+                uncheckedIcon={
+                    <IconContext.Provider value={{color: "white", size: "40px"}}>
+                        <TbStarOff />
+                    </IconContext.Provider>}
+                onClick={() => handleCheckbox()}
+                />
+
+                {/* <input 
                 type="checkbox"
                 checked={checked}
                 value ={id}
-                onChange={(event)=> handleCheckbox(event) }/>
+                onChange={(event)=> handleCheckbox(event) }/> */}
             </span>
 
             <span onClick={(event) => handleDelete(event)}><IoTrashOutline color={"#2283e6"} size={"40px"}/>

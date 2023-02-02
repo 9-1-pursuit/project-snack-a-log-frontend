@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
-import {FaHeart} from "react-icons/fa"
 import { WiStars } from "react-icons/wi"
 import SnackCard from "./SnackCard.js";
 import "./SnacksIndex.css";
+import { Axios } from "axios";
 
 export default function SnacksIndex() {
-  const { snacks, setSnacks } = useContextProvider();
+  const { snacks, setSnacks, axios, API } = useContextProvider();
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [radio, setRadio] = useState("");
@@ -62,7 +62,10 @@ export default function SnacksIndex() {
     }
   }
 
-  useEffect(() => {}, [snacks.length, favorite.length]);
+  useEffect(() => {
+    // favorites
+
+  }, [snacks.length, favorite.length]);
 
   return (
     <div className="index">
