@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
 import { WiStars } from "react-icons/wi"
-import { MdFastfood } from "react-icons/md"
 import SnackCard from "./SnackCard.js";
 import "./SnacksIndex.css";
 import { Axios } from "axios";
@@ -163,7 +162,7 @@ export default function SnacksIndex() {
             }
           })}
         </div>
-        <div className="fiber">
+        {/* <div className="fiber">
           <h5>High In Sugar</h5>
           {snacks.map(({ added_sugar, name, id }) => {
             if (+added_sugar > 10) {
@@ -174,7 +173,7 @@ export default function SnacksIndex() {
               );
             }
           })}
-        </div>
+        </div> */}
       </aside>
 
       {/* snack details */}
@@ -199,7 +198,6 @@ export default function SnacksIndex() {
           return (
             <li key={id}>
               <Link to={`/snacks/${id}`}>{name}</Link>
-              <MdFastfood size={"30px"} color={"#f9004e"} />
             </li>
             
           );

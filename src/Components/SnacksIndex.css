@@ -106,13 +106,13 @@
   grid-row: 3;
   grid-template-rows: auto;
   /* padding-left: 5px; */
-  height: 64vh;
+  height: 50vh;
 }
 
 .index-left .fiber {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   justify-items: center;
   text-align: center;
 }
@@ -127,11 +127,6 @@
   left: -10px;
 }
 
-.index-left h5 {
-  grid-column: span 2;
-  position: relative;
-  right: 20px;
-}
 
 .index-left .fiber a, .index-left .fiber a li {
   width: 195px;
@@ -141,7 +136,7 @@
 /* favorites */
 .index-right {
   grid-template-rows: .3fr repeat(5, 0.5fr);
-  height: 35vh;
+  height: 50vh;
   margin-bottom: 10px;
 }
 
@@ -149,11 +144,23 @@
   width: 60%;
   display: flex;
   justify-content: center;
+  margin-top: 7%;
 }
 
 .index-right h5 svg {
   animation: beat 1.5s linear infinite;
 }
+
+.index-right li {
+  list-style: none;
+  
+}
+
+.index-right li::before {
+    content: "🌟"; 
+    margin-right: 10px;
+}
+
 
 .index-right a {
   margin-right: 7px;

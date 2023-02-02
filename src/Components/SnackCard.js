@@ -6,6 +6,7 @@ import { IconContext } from "react-icons";
 import { FaThumbsUp, FaThumbsDown, FaStar } from "react-icons/fa"
 import { IoNutritionSharp, IoTrashOutline } from "react-icons/io5"
 import { TbCandy } from "react-icons/tb"
+import { GiWrappedSweet } from "react-icons/gi"
 import { TbStarOff } from "react-icons/tb"
 import "./SnackCard.css"
 
@@ -69,7 +70,7 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
             <p>{name}</p>
         </Link>
             <p>{description}</p>
-            <p>{is_healthy ? <IoNutritionSharp color={"green"} size={"35px"}/> : <TbCandy color={"red"} size={"35px"}/> }</p>
+            <p>{is_healthy ? <IoNutritionSharp color={"green"} size={"35px"}/> : <GiWrappedSweet color={"#E3056C"} size={"40px"}/> }</p>
         </section>
 
         {/* favorite / delete */}
