@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
 import Solid from "../assets/heart-solid.png";
 import Outline from "../assets/heart-regular.png";
+import NoImage from "../assets/default.webp"
 import "./Form.css";
 
 export default function Form() {
@@ -76,7 +77,7 @@ export default function Form() {
 
       <form onSubmit={handleSubmit}>
         <div id="form-img">
-          <img src={snack.image} alt="snack image"/>
+          <img src={snack.image !== ""?snack.image: NoImage} alt="awaiting valid url"/>
           <div>
             <label htmlFor="name">Name:</label>
             <input
