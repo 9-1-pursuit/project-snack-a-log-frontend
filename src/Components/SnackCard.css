@@ -21,8 +21,17 @@
     text-align: center;
 }
 
-.snack-details a {
-  font-size: large;
+
+.snack-details p {
+  margin: 0;
+}
+.snack-details p:first-child {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.snack-details p:nth-child(2) {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .index-fav-delete {

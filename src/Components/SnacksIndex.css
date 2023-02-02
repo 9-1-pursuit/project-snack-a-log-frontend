@@ -64,6 +64,18 @@
   overflow: auto;
 }
 
+.index-snack hr {
+  grid-column: 1/4;
+  border: 1px solid #084e994e ;
+  width: 75%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  
+  
+}
+
 .index-snack img {
   height: 150px;
   width: 150px;
@@ -77,10 +89,6 @@
   transform: scale(1.1);
 }
 
-/* .index-snack a {
-  width: fit-content;
-} */
-
 .index-left,
 .index-right {
   display: grid;
@@ -90,16 +98,28 @@
   position: relative;
   right: 70px;
   width: 100%;
+  font-size: 18px;
 }
+
+
 
 .index-left h5,
 .index-right h5 {
   margin: 0;
   height: fit-content;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
+.index-left h5:first-child{
+  margin-top: 20px;
+}
+
+
+.index-left hr {
+  width: 70%;
+  border: #084e994e 1px solid ;
+}
 /* fiber/protein */
 .index-left {
   grid-column: 3;
@@ -109,13 +129,7 @@
 }
 
 .index-left .fiber {
-  /* border: 2px solid  #2283e6;
-  border-radius: 24px;
-  padding: 15px;
-  width: 80%; */
-  
-
-  /* width: 100%; */
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -166,7 +180,6 @@
     margin-right: 10px;
 }
 
-
 .index-right a {
   margin-right: 7px;
 }
@@ -182,9 +195,9 @@
 /* scrollbar */
 ::-webkit-scrollbar {
   /* // Width of vertical scroll bar */
-  width: 10px;
+  width: 7px;
   /* // Height of horizontal scroll bar */
-  height: 10px;
+  height: 8px;
 }
 /* imit 'reach of scrollbar, wont cut */
 ::-webkit-scrollbar-button:start{height: 50px; width:15%;}

@@ -72,7 +72,6 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
             <p>{description}</p>
             <p>{is_healthy ? <IoNutritionSharp color={"green"} size={"35px"}/> : <GiWrappedSweet color={"#E3056C"} size={"40px"}/> }</p>
         </section>
-
         {/* favorite / delete */}
         <section className="index-fav-delete">
             <span>
@@ -95,6 +94,7 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
             <span onClick={(event) => handleDelete(event)}><IoTrashOutline color={"#2283e6"} size={"40px"}/>
             </span>
         </section>
+        <hr/>
        </>
     )
 }
