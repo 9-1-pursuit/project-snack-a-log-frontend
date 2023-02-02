@@ -1,6 +1,5 @@
 .snack-info {
   text-align: center;
-  /* margin-top: 3rem; */
   height: 100vh;
   width: 100vw;
 }
@@ -20,11 +19,11 @@
 }
 
 .snack-img {
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   border-radius: 50px;
   margin-right: 50px;
-  /* border: 2px solid red; */
+  /* border: 2px solid rgba(46, 40, 40, 0.481); */
 }
 
 .snack-text {
@@ -55,4 +54,59 @@
   background-color: cornflowerblue;
   color: darkslateblue;
   border-color: aquamarine;
+}
+
+@media (max-width: 390px) {
+  .snack-info {
+    width: 100%;
+    height: 100%;
+  }
+
+  .snackInfo {
+    display: grid;
+    position: relative;
+    left: 8.5%;
+  }
+
+  .snack-info h1 {
+    font-size: xx-large;
+    position: relative;
+    right: 5%;
+  }
+
+  .snack-img {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 25%;
+    border-radius: 10px;
+    /* border: 2px solid red; */
+  }
+
+  .snack-text {
+    /* border: 2px solid green; */
+    padding-top: 25px;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+    position: relative;
+    left: 2.5%;
+  }
+  .buttons {
+    display: grid;
+    position: relative;
+    right: 2%;
+  }
+
+  .navButtons {
+    all: unset;
+    cursor: pointer;
+    margin: 5px;
+    background-color: blue;
+    color: aquamarine;
+    border: 2px solid aquamarine;
+    border-radius: 24px;
+    font-size: 14px;
+    padding: 5px 20px 5px 20px;
+  }
 }
