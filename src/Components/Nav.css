@@ -20,6 +20,7 @@ nav a {
 
 nav a:hover {
   color: orangered;
+  transform: scale(1.3);
 }
 nav a img {
   margin-bottom: 15px;

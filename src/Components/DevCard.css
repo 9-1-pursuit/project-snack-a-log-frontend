@@ -63,6 +63,7 @@ article .dev {
 
 .dev-buttons button {
   all: unset;
+  cursor: pointer;
 }
 
 .dev-buttons button img {

@@ -57,25 +57,35 @@ h5 {
 }
 
 #home {
-  height: 100vh;
+  height: 85vh;
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #home img {
-  padding-top: 20px;
+  height: 500px;
+  margin-left: 20px;
+  border-radius: 20px;
+  border: 3px solid #2283e6;
 }
 
 #home p {
+  margin: 0 auto;
+  margin: 30px;
+  margin-left: 50px;
   font-size: 22px;
   border: 3px solid #2283e6;
-  width: 80vw;
-  margin: 0 auto;
+  width: 35%;
+  height: 60%;
   border-radius: 24px;
   background-color: lightsalmon;
-  padding: 30px 10px;
+  padding: 30px 30px 0px 30px;
 }
 
 #home p #hint {
- color: #003873;
+  color: #003873;
 }
