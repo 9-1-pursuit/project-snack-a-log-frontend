@@ -163,3 +163,30 @@ textarea {
     font-size: 14px;
   }
 }
+
+@media (max-width: 540px) {
+  #form-img, form #form-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+  }
+  .form{
+    height: auto;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 440px){
+  #form-img div, form #form-icon div {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80vw;
+  }
+  #form-img {
+    padding: 0px;
+  }
+  form{
+    padding:10px 4px;
+  }
+}
