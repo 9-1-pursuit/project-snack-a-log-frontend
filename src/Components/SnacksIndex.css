@@ -64,6 +64,18 @@
   overflow: auto;
 }
 
+.index-snack hr {
+  grid-column: 1/4;
+  border: 1px solid #084e994e ;
+  width: 75%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  
+  
+}
+
 .index-snack img {
   height: 150px;
   width: 150px;
@@ -77,10 +89,6 @@
   transform: scale(1.1);
 }
 
-/* .index-snack a {
-  width: fit-content;
-} */
-
 .index-left,
 .index-right {
   display: grid;
@@ -90,29 +98,40 @@
   position: relative;
   right: 70px;
   width: 100%;
+  font-size: 18px;
 }
+
+
 
 .index-left h5,
 .index-right h5 {
   margin: 0;
   height: fit-content;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
+.index-left h5:first-child{
+  margin-top: 20px;
+}
+
+
+.index-left hr {
+  width: 70%;
+  border: #084e994e 1px solid ;
+}
 /* fiber/protein */
 .index-left {
   grid-column: 3;
   grid-row: 3;
   grid-template-rows: auto;
-  /* padding-left: 5px; */
-  height: 64vh;
+  height: 50vh;
 }
 
 .index-left .fiber {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   justify-items: center;
   text-align: center;
 }
@@ -127,11 +146,6 @@
   left: -10px;
 }
 
-.index-left h5 {
-  grid-column: span 2;
-  position: relative;
-  right: 20px;
-}
 
 .index-left .fiber a, .index-left .fiber a li {
   width: 195px;
@@ -141,7 +155,7 @@
 /* favorites */
 .index-right {
   grid-template-rows: .3fr repeat(5, 0.5fr);
-  height: 35vh;
+  height: 50vh;
   margin-bottom: 10px;
 }
 
@@ -149,10 +163,21 @@
   width: 60%;
   display: flex;
   justify-content: center;
+  margin-top: 7%;
 }
 
 .index-right h5 svg {
   animation: beat 1.5s linear infinite;
+}
+
+.index-right li {
+  list-style: none;
+  
+}
+
+.index-right li::before {
+    content: "🌟"; 
+    margin-right: 10px;
 }
 
 .index-right a {
@@ -170,9 +195,9 @@
 /* scrollbar */
 ::-webkit-scrollbar {
   /* // Width of vertical scroll bar */
-  width: 10px;
+  width: 7px;
   /* // Height of horizontal scroll bar */
-  height: 10px;
+  height: 8px;
 }
 /* imit 'reach of scrollbar, wont cut */
 ::-webkit-scrollbar-button:start{height: 50px; width:15%;}

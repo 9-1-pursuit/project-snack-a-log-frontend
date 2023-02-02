@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
 import { WiStars } from "react-icons/wi"
-import { MdFastfood } from "react-icons/md"
 import SnackCard from "./SnackCard.js";
 import "./SnacksIndex.css";
 import { Axios } from "axios";
@@ -67,8 +66,21 @@ export default function SnacksIndex() {
     // favorites
     const data = JSON.parse(localStorage.getItem('favorites'))
     if(data){
-      setFavorite(data)
+      // compare if value is in snacks, if not remove from favorites
+      const idArrFav = data.map(({id}) => id )
+      const snackIdArr = snacks.map(({id}) => id)
+      // console.log(idArrFav, snackIdArr)
+      //   console.log(idArrFav)
+        // const noMatchSnacks = idArrFav.map(favId => snacks.filter(({id}) => {
+        //   if(favId === id) return favId
+        // }
+        //   )
+        // )
+
+        // console.log(noMatchSnacks)
+     
     }
+    setFavorite(data)
   }, [snacks.length, favorite.length]);
 
   return (
@@ -137,7 +149,7 @@ export default function SnacksIndex() {
       </section>
 
 
-      {/* aside1 can be dead space for pop up menu */}
+      {/* aside1 fiber/ protein */}
       <aside className="index-left">
         <div className="fiber">
           <h5>High in Fiber:</h5>
@@ -151,22 +163,11 @@ export default function SnacksIndex() {
             }
           })}
         </div>
+        <hr />
         <div className="fiber">
           <h5>High In Protein</h5>
           {snacks.map(({ protein, name, id }) => {
             if (+protein > 20) {
-              return (
-                <Link key={id} to={`/snacks/${id}`}>
-                  <li>{name}</li>
-                </Link>
-              );
-            }
-          })}
-        </div>
-        <div className="fiber">
-          <h5>High In Sugar</h5>
-          {snacks.map(({ added_sugar, name, id }) => {
-            if (+added_sugar > 10) {
               return (
                 <Link key={id} to={`/snacks/${id}`}>
                   <li>{name}</li>
@@ -191,17 +192,15 @@ export default function SnacksIndex() {
         ))}
       </section>
 
-      {/* aside 2 for favorites list */}
+      {/* aside 2 favorites list */}
       <aside className="index-right">
         <h5><span>Favorites</span> <WiStars color={"gold"} size={"30px"} /></h5>
-        
-        {favorite.map(({ id, name }) => {
+        {
+        favorite.map(({ id, name }) => {
           return (
             <li key={id}>
               <Link to={`/snacks/${id}`}>{name}</Link>
-              <MdFastfood size={"30px"} color={"#f9004e"} />
-            </li>
-            
+            </li> 
           );
         })}
       </aside>
