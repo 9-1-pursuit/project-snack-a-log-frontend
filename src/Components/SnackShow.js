@@ -35,7 +35,7 @@ export default function SnackShow() {
 
   return (
     <>
-      <article className="snack-info">
+      <div className="snack-info">
         <h1>
           <strong>
             <b>{snack.name}</b>
@@ -103,7 +103,7 @@ export default function SnackShow() {
             </button>
           </div>
         </div>
-      </article>
+      </div>
     </>
   );
 }

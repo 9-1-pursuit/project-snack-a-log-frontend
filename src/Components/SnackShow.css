@@ -1,6 +1,6 @@
 .snack-info {
   text-align: center;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   height: 100vh;
   width: 100vw;
 }
@@ -8,21 +8,22 @@
 .snackInfo {
   display: flex;
   justify-content: center;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-}
-
-.navButtons {
-  margin: 15px;
+  background-color: lightsalmon;
+  padding: 20px;
+  width: 60%;
+  align-items: center;
+  position: relative;
+  left: 17%;
+  border-radius: 50px;
+  border: 3px solid rgb(63, 63, 255);
+  margin: 3px;
 }
 
 .snack-img {
   height: 350px;
   width: 350px;
   border-radius: 50px;
+  margin-right: 50px;
   /* border: 2px solid red; */
 }
 
@@ -32,4 +33,26 @@
   width: 30%;
   height: 30%;
   /* border: 2px solid green; */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.navButtons {
+  all: unset;
+  cursor: pointer;
+  margin: 15px;
+  background-color: blue;
+  color: aquamarine;
+  border: 2px solid aquamarine;
+  border-radius: 24px;
+  font-size: 14px;
+  padding: 5px 25px 5px 25px;
+}
+
+.navButtons:hover {
+  background-color: cornflowerblue;
+  color: darkslateblue;
+  border-color: aquamarine;
 }
