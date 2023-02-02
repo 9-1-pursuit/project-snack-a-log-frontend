@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
 import Solid from "../assets/heart-solid.png";
 import Outline from "../assets/heart-regular.png";
-import NoImage from "../assets/default.webp";
+import NoImage from "../assets/default.png";
 import "./Form.css";
 
 export default function Form() {
@@ -78,7 +78,7 @@ export default function Form() {
 
   return (
     <div className="form">
-      <h2>{id ? "Edit" : "New"} Form</h2>
+      <h2>{id ? "" : "Add a Snack"}</h2>
 
       <form onSubmit={handleSubmit}>
         <div id="form-img">
@@ -114,7 +114,7 @@ export default function Form() {
 
         <div id="form-icon">
           <div>
-            <label htmlFor="carbs">Carbs(g):</label>
+            <label htmlFor="carbs">Carbs (g):</label>
             <input
               id="carbs"
               type="number"
@@ -123,7 +123,7 @@ export default function Form() {
               onChange={handleChange}
               value={snack.carbs}
             />
-            <label htmlFor="fiber">Fiber(g):</label>
+            <label htmlFor="fiber">Fiber (g):</label>
             <input
               id="fiber"
               type="number"
@@ -132,7 +132,7 @@ export default function Form() {
               onChange={handleChange}
               value={snack.fiber}
             />
-            <label htmlFor="protein">Protein(g):</label>
+            <label htmlFor="protein">Protein (g):</label>
             <input
               id="protein"
               type="number"
@@ -141,7 +141,7 @@ export default function Form() {
               onChange={handleChange}
               value={snack.protein}
             />
-            <label htmlFor="added_sugar">Added Sugar(g):</label>
+            <label htmlFor="added_sugar">Added Sugar (g):</label>
             <input
               id="added_sugar"
               type="number"
