@@ -105,12 +105,17 @@
   grid-column: 3;
   grid-row: 3;
   grid-template-rows: auto;
-  /* padding-left: 5px; */
   height: 50vh;
 }
 
 .index-left .fiber {
-  width: 100%;
+  /* border: 2px solid  #2283e6;
+  border-radius: 24px;
+  padding: 15px;
+  width: 80%; */
+  
+
+  /* width: 100%; */
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
