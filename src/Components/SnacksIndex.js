@@ -64,7 +64,14 @@ export default function SnacksIndex() {
 
   useEffect(() => {
     // favorites
-
+    const data = JSON.parse(localStorage.getItem('favorites'))
+    if(data){
+      setFavorite(data)
+    }
+    
+    // axios.get(`${API}/favorites`)
+    // .then(({data}) => setFavorite(data))
+    // .catch(err => console.log(err))
   }, [snacks.length, favorite.length]);
 
   return (

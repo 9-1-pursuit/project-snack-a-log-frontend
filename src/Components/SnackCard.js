@@ -31,22 +31,30 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
         const exist = favorite.find(obj => +id === obj.id)
         if(!exist){
          const favObj = snacks.find(obj=> +id === obj.id)
-            setFavorite([...favorite, favObj ])
+         setFavorite([...favorite, favObj])
+         localStorage.setItem('favorites', JSON.stringify([...favorite, favObj]))
         }
         if(exist){
-            const removeFav = favorite.filter(obj => obj.id !== +id)
+            const removeFav = favorite.filter(obj => +obj.id !== +id)
             setFavorite(removeFav)
+            localStorage.setItem('favorites', JSON.stringify(removeFav))  
         }
     }
     useEffect(() => {
-        axios.get(`${API}/favorites`)
-        .then(({data}) => {
-           
+        const data = JSON.parse(localStorage.getItem('favorites'))
+        if(data){
             const isFav = data.find(obj => +obj.id === id)
-           if(Object.keys(isFav).length >0 ){
-            setChecked(true)
-           }
-        })
+            if(!isFav){
+                setChecked(false)
+            }
+            else {
+                setChecked(true)
+            }
+            
+            
+        
+        }
+        
     },[id])
 
     return(
