@@ -206,14 +206,15 @@ footer {
 /* Mobile view  */
 @media (max-width: 360px) {
   .index {
+    /* index.css with extra padding */
+    all:unset;
+    display: grid;
     grid-template-columns: 1fr;
-    max-height: 780px;
+    max-height: 800px;
     overflow-y: scroll;
-  }
-  .index h2 {
-    background-color: purple;
-    color: orangered;
-    border: 1px solid orangered;
+    width: 90%;
+    padding: 0;
+    margin: 0;
   }
   .index .add-button {
     display: unset;
@@ -223,21 +224,24 @@ footer {
     height: 60px;
     position: fixed;
     z-index: 500;
-    left: 45%;
+    left: 42%;
     top: 87%;
     border-radius: 50%;
   }
   .index-snack {
+    all:unset;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
     row-gap: 20px;
+    width: 100vw;
+   
   }
   .index-snack img {
     height: 150px;
     border-radius: 10px;
   }
   .index aside,
-  .index-header {
+  .index-header, .cat-gif {
     display: none;
   }
 }
