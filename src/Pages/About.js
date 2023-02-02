@@ -1,6 +1,25 @@
+import { useEffect, useState } from "react";
 import DevCard from "../Components/DevCard.js";
+import { useNavigate } from "react-router-dom";
+import { useContextProvider } from "../Provider/Provider"
 import heart from "../assets/heart-solid.png";
 export default function About() {
+  const { API, axios } = useContextProvider();
+  const [devs, setDevs] = useState([])
+  let navigate = useNavigate();
+
+
+  useEffect(() => {
+    axios
+      .get(`${API}/devs`)
+      .then((res) => {
+        setDevs(res.data);
+      })
+      .catch(() => navigate("/not-found"));
+  }, [navigate]);
+
+  console.log(devs)
+
   const dev1 = {
     imageURL: "https://i.postimg.cc/fTSwdqcY/Photo.jpg",
     name: "Jahaad Petty",

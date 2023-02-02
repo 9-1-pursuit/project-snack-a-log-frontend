@@ -4,6 +4,7 @@ import github from "../assets/github.png"
 import linkedin from "../assets/linkedin.png"
 import emailImg from "../assets/email.png"
 import "./DevCard.css";
+import { useContextProvider } from "../Provider/Provider";
 
 const DevCard = ({ dev }) => {
   const { imageURL, name, githubURL, indeedURL, email, description } = dev;
