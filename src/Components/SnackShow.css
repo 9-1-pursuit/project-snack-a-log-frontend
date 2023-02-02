@@ -19,11 +19,11 @@
 }
 
 .snack-img {
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   border-radius: 50px;
   margin-right: 50px;
-  /* border: 2px solid red; */
+  /* border: 2px solid rgba(46, 40, 40, 0.481); */
 }
 
 .snack-text {
