@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 360px){
-    .snack-details, .index-fav-delete {
+    .snack-details, .index-fav-delete, hr {
         display: none;
     }
     .container {
