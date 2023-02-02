@@ -3,13 +3,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
 import Solid from "../assets/heart-solid.png";
 import Outline from "../assets/heart-regular.png";
-import NoImage from "../assets/default.webp"
+import NoImage from "../assets/default.webp";
 import "./Form.css";
 
 export default function Form() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { axios, API, setHidden } = useContextProvider();
+  const { axios, API, setHidden, trigger, setTrigger } = useContextProvider();
   const [isHealthy, setIsHealthy] = useState(false);
   const [modal, setModal] = useState(false);
   const [snack, setSnack] = useState({
@@ -39,10 +39,12 @@ export default function Form() {
     }
   }, [snack.fiber, snack.protein, snack.added_sugar]);
 
-  useEffect(()=>{if (snack.name === "d3v$f4v$") {
-    setHidden(false);
-    setModal(true);
-  } }, [snack.name])
+  useEffect(() => {
+    if (snack.name === "d3v$f4v$") {
+      setHidden(false);
+      setModal(true);
+    }
+  }, [snack.name]);
 
   const handleChange = (event) => {
     setSnack({ ...snack, [event.target.id]: event.target.value });
@@ -52,11 +54,14 @@ export default function Form() {
     event.preventDefault();
     // if (snack.name === "d3v$f4v$") {
     //   setModal(true);
-    // } else 
+    // } else
     if (id) {
       axios
         .put(`${API}/snacks/${id}`, snack)
-        .then(navigate(`/snacks/${id}`))
+        .then(() => {
+          navigate(`/snacks/${id}`);
+          setTrigger(-trigger);
+        })
         .catch((error) => console.log(error));
     } else {
       axios
@@ -77,7 +82,10 @@ export default function Form() {
 
       <form onSubmit={handleSubmit}>
         <div id="form-img">
-          <img src={snack.image !== ""?snack.image: NoImage} alt="awaiting valid url"/>
+          <img
+            src={snack.image !== "" ? snack.image : NoImage}
+            alt="awaiting valid url"
+          />
           <div>
             <label htmlFor="name">Name:</label>
             <input
@@ -144,7 +152,7 @@ export default function Form() {
             />
           </div>
           <div id="health-icon">
-            <img src={isHealthy ? Solid : Outline} alt="health icon"/>
+            <img src={isHealthy ? Solid : Outline} alt="health icon" />
             <h3>{isHealthy ? "healthy" : "unhealthy"}</h3>
           </div>
         </div>

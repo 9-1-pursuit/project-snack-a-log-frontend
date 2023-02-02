@@ -14,6 +14,7 @@ export default function Provider({ children }) {
   const [snacks, setSnacks] = useState([]);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [hidden, setHidden] = useState(true);
+  const [trigger, setTrigger] = useState(1);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -38,7 +39,9 @@ export default function Provider({ children }) {
         theme,
         setTheme,
         hidden,
-        setHidden
+        setHidden,
+        trigger,
+        setTrigger
       }}
     >
       <Nav />
