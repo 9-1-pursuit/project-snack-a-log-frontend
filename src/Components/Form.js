@@ -99,7 +99,7 @@ export default function Form() {
             <input
               id="image"
               type="url"
-              placeholder="include http:// or https:// at front of url"
+              placeholder="include http:// or https://"
               onChange={handleChange}
               value={snack.image}
             />
