@@ -21,11 +21,16 @@
     text-align: center;
 }
 
+.snack-details a {
+  font-size: large;
+}
+
 .index-fav-delete {
-  text-align: center;
+  justify-items: center;
   align-self: center;
   height: fit-content;
-  display: grid;
+  display: flex;
+  column-gap: 15px;
 }
 
 .index-fav-delete span:last-child:hover {

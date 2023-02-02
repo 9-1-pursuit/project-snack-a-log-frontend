@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContextProvider } from "../Provider/Provider.js";
 import { WiStars } from "react-icons/wi"
+import { MdFastfood } from "react-icons/md"
 import SnackCard from "./SnackCard.js";
 import "./SnacksIndex.css";
 import { Axios } from "axios";
@@ -68,10 +69,6 @@ export default function SnacksIndex() {
     if(data){
       setFavorite(data)
     }
-    
-    // axios.get(`${API}/favorites`)
-    // .then(({data}) => setFavorite(data))
-    // .catch(err => console.log(err))
   }, [snacks.length, favorite.length]);
 
   return (
@@ -202,8 +199,9 @@ export default function SnacksIndex() {
           return (
             <li key={id}>
               <Link to={`/snacks/${id}`}>{name}</Link>
-              ❤️
+              <MdFastfood size={"30px"} color={"#f9004e"} />
             </li>
+            
           );
         })}
       </aside>

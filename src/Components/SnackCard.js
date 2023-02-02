@@ -50,11 +50,7 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
             else {
                 setChecked(true)
             }
-            
-            
-        
-        }
-        
+        } 
     },[id])
 
     return(
@@ -93,12 +89,6 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
                     </IconContext.Provider>}
                 onClick={() => handleCheckbox()}
                 />
-
-                {/* <input 
-                type="checkbox"
-                checked={checked}
-                value ={id}
-                onChange={(event)=> handleCheckbox(event) }/> */}
             </span>
 
             <span onClick={(event) => handleDelete(event)}><IoTrashOutline color={"#2283e6"} size={"40px"}/>
