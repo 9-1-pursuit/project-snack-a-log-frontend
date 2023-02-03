@@ -1,7 +1,7 @@
 .snack-info {
   text-align: center;
   height: 100vh;
-  width: 100vw;
+  width: 95vw;
 }
 
 .snackInfo {
@@ -9,10 +9,10 @@
   justify-content: center;
   background-color: lightsalmon;
   padding: 20px;
-  width: 60%;
+  width: 70%;
   align-items: center;
   position: relative;
-  left: 17%;
+  left: 13%;
   border-radius: 50px;
   border: 3px solid rgb(63, 63, 255);
   margin: 3px;
@@ -23,7 +23,6 @@
   width: 300px;
   border-radius: 50px;
   margin-right: 50px;
-  /* border: 2px solid rgba(46, 40, 40, 0.481); */
 }
 
 .snack-text {
@@ -31,7 +30,6 @@
   flex-direction: column;
   width: 30%;
   height: 30%;
-  /* border: 2px solid green; */
 }
 
 .buttons {
@@ -56,46 +54,52 @@
   border-color: aquamarine;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 800px) {
   .snack-info {
-    width: 100%;
-    height: 100%;
-  }
-
-  .snackInfo {
-    display: grid;
-    position: relative;
-    left: 8.5%;
+    height: 120vh;
   }
 
   .snack-info h1 {
-    font-size: xx-large;
+    all: unset;
+    font-size: x-large;
+    margin-top: 50px;
+  }
+
+  .snackInfo {
+    margin: 0 auto;
+    background-color: lightsalmon;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    right: 5%;
+    left: 0px;
+    max-height: 90vh;
   }
 
   .snack-img {
-    height: 100px;
-    width: 100px;
-    position: relative;
-    left: 25%;
-    border-radius: 10px;
-    /* border: 2px solid red; */
+    margin: 0 auto;
+    max-width: 200px;
+    margin-bottom: 20px;
+    height: fit-content;
+    border: 2px solid blue;
+    border-radius: 20px;
+    align-self: center;
   }
 
   .snack-text {
-    /* border: 2px solid green; */
+    all: unset;
     padding-top: 25px;
     justify-content: center;
-    width: max-content;
-    height: max-content;
+    width: 95%;
     position: relative;
     left: 2.5%;
   }
+
+  .snack-text h5 {
+    font-size: 20px;
+  }
+
   .buttons {
-    display: grid;
-    position: relative;
-    right: 2%;
+    padding-bottom: 50px;
   }
 
   .navButtons {
@@ -108,5 +112,19 @@
     border-radius: 24px;
     font-size: 14px;
     padding: 5px 20px 5px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .snack-info {
+    width: 300px;
+  }
+  .snackInfo {
+    width: 250px;
+  }
+  .snack-info h1 {
+    font-size: x-large;
+    font-weight: bolder;
+    width: 300px;
   }
 }

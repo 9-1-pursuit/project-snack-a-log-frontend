@@ -7,9 +7,9 @@ export default function Home() {
       {/* <h1>Welcome to Snax!</h1> */}
       <img src={welcome} alt="welcome" />
       <p>
-        About the project Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Augue eget arcu dictum varius duis at consectetur lorem donec.{" "}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Augue eget arcu
+        dictum varius duis at consectetur lorem donec.{" "}
         <Link id="hint" to="/snacks/new">
           d3v$f4v$
         </Link>{" "}
