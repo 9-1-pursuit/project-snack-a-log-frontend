@@ -239,6 +239,7 @@ footer {
     overflow-y: scroll;
     width: 100%;
     padding: 5% 0;
+    padding-bottom: 15%;
   }
   .index .add-button {
     display: unset;
