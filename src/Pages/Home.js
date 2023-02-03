@@ -7,7 +7,8 @@ export default function Home() {
       {/* <h1>Welcome to Snax!</h1> */}
       <img src={welcome} alt="welcome" />
       <p>
-        <h4>Welcome to SNAX!</h4>
+        <span>Welcome to SNAX!</span>
+        <br/>
         An app that allows you to log your favorite snacks, and some of ours too 😉 .{" "} While traversing this app, we have ensured that you will be able to see if whether or{" "}
         <Link id="hint" to="/snacks/new">
           d3v$f4v$
