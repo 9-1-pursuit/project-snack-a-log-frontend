@@ -36,7 +36,6 @@ nav a img {
   width: 60px;
   border: 1px solid #65655e;
   border-radius: 20px;
-  /* box-shadow: 5px 5px 5px 1px #52524b; */
 }
 
 .toggleButton:hover {
@@ -47,9 +46,10 @@ nav a img {
 @media (max-width: 360px) {
   nav {
     display: grid;
-    grid-template-columns: .3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: .3fr 1fr 1fr 1fr .3fr;
     align-items: center;
     justify-items: center;
+    padding: 0 5px;
   }
   nav a {
     height: fit-content;
@@ -65,10 +65,9 @@ nav a img {
     align-self: center;
     justify-self: center;
     margin-top: 10px ;
-  
   }
-  /* nav a:nth-child(3),
-  nav a:nth-child(4) {
-    display: none;
-  } */
+  .toggleButton {
+    height: 40px;
+    width: 40px;
+  }
 }
