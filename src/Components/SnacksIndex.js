@@ -195,7 +195,7 @@ export default function SnacksIndex() {
 
       {/* aside 2 favorites list */}
       <aside className="index-right">
-        <h5><span>Favorites</span> <WiStars color={"gold"} size={"30px"} /></h5>
+        <h5><span>Favorites</span> <WiStars color={"gold"} size={"40px"} /></h5>
         {
         favorite.map(({ id, name }) => {
           return (
