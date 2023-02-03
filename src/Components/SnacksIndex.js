@@ -78,9 +78,9 @@ export default function SnacksIndex() {
         // )
 
         // console.log(noMatchSnacks)
-     
+        setFavorite(data)
     }
-    setFavorite(data)
+    
   }, [snacks.length, favorite.length]);
 
   return (

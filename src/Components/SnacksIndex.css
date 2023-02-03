@@ -235,11 +235,11 @@ footer {
     all:unset;
     display: grid;
     grid-template-columns: 1fr;
-    max-height: 800px;
+    /* max-height: 800px; */
     overflow-y: scroll;
-    width: 90%;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    padding: 5% 0;
+    padding-bottom: 15%;
   }
   .index .add-button {
     display: unset;
@@ -257,9 +257,15 @@ footer {
     all:unset;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 100%;
     row-gap: 20px;
-    width: 100vw;
-   
+    position: relative;
+    right:7%;
+  }
+  .index-snack a {
+    width: 100px;
+    margin-left: 5px;
   }
   .index-snack img {
     height: 150px;
