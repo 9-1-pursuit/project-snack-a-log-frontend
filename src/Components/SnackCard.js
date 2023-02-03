@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa"
 import { IoNutritionSharp, IoTrashOutline } from "react-icons/io5"
 import { GiWrappedSweet } from "react-icons/gi"
 import { TbStarOff } from "react-icons/tb"
+import noImage from "../assets/default.png"
 import "./SnackCard.css"
 
 export default function SnackCard({snack, setSearchResult, setSearch, favorite, setFavorite}) {
@@ -57,7 +58,7 @@ export default function SnackCard({snack, setSearchResult, setSearch, favorite, 
        <>
         <Link to={`/snacks/${id}`}>
             <div className="container">
-                <img src={image} alt={name} />
+                <img src={image ? image : noImage} alt={name} />
                 <div className="middle">
                     <div className="text">{name}</div>
                 </div>

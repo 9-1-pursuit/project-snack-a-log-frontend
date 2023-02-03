@@ -62,6 +62,7 @@
   height: fit-content;
   height: 100vh;
   overflow: auto;
+  align-items: center;
 }
 
 .index-snack hr {
@@ -185,7 +186,7 @@
 /* scrollbar */
 ::-webkit-scrollbar {
   /* // Width of vertical scroll bar */
-  width: 7px;
+  width: 10px;
   /* // Height of horizontal scroll bar */
   height: 8px;
 }

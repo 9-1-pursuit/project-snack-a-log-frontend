@@ -80,6 +80,9 @@ export default function SnacksIndex() {
       else {
         setFavorite(data)
       }
+      axios.get(`${API}/snacks`)
+      .then(({data}) => setSnacks(data))
+      .catch(err => console.log(err))
     
     
   }, [snacks.length, favorite.length]);
