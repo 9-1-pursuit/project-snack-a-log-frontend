@@ -1,0 +1,25 @@
+.error {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #toast {
+    display: none;
+  }
+  
+  @media (max-width: 360px) {
+      .error {
+          height: 80vh;
+          display: flex;
+        }
+  
+    #milk {
+      display: none;
+    }
+    #toast {
+      display: block;
+      width: 100%;
+    }
+  }

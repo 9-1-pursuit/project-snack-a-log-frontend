@@ -1,10 +1,14 @@
 import milk from "../assets/404-milk.png";
+import toast from "../assets/404-toast.png";
+import "./FourOFour.css";
 
 export default function FourOFour() {
   return (
-    <>
-      <h2>404 Page</h2>
-      <img src={milk} alt="error" />
-    </>
+    <div className="error">
+      <div>
+        <img id="milk" src={milk} alt="error" />
+        <img id="toast" src={toast} alt="error" />
+      </div>
+    </div>
   );
 }
