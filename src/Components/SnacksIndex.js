@@ -65,21 +65,22 @@ export default function SnacksIndex() {
   useEffect(() => {
     // favorites
     const data = JSON.parse(localStorage.getItem('favorites'))
-    if(data){
+    
       // compare if value is in snacks, if not remove from favorites
       const idArrFav = data.map(({id}) => id )
       const snackIdArr = snacks.map(({id}) => id)
-      // console.log(idArrFav, snackIdArr)
-      //   console.log(idArrFav)
-        // const noMatchSnacks = idArrFav.map(favId => snacks.filter(({id}) => {
-        //   if(favId === id) return favId
-        // }
-        //   )
-        // )
 
-        // console.log(noMatchSnacks)
+      const noMatch = idArrFav.filter(el => !snackIdArr.includes(el))
+      if(noMatch.length > 0){
+      // filter out favArr
+      const updatedFavs = favorite.filter(({id}) => id !== noMatch[0])
+      setFavorite(updatedFavs)
+      localStorage.setItem('favorites', JSON.stringify(updatedFavs))
+      }
+      else {
         setFavorite(data)
-    }
+      }
+    
     
   }, [snacks.length, favorite.length]);
 
