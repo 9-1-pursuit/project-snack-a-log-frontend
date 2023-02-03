@@ -12,9 +12,11 @@ export default function SnackShow() {
   let navigate = useNavigate();
 
   useEffect(() => {
+    // console.log("useFffect running");
     axios
       .get(`${API}/snacks/${id}`)
       .then((res) => {
+        console.log(res.data);
         setSnack(res.data);
       })
       .catch(() => navigate("/not-found"));
@@ -34,76 +36,70 @@ export default function SnackShow() {
   };
 
   return (
-    <>
-      <div className="snack-info">
-        <h1>
-          <strong>
-            <b>{snack.name}</b>
-          </strong>
-        </h1>
-        <div className="snackInfo">
-          <img className="snack-img" src={snack.image} alt="snack-image" />
-          <div className="snack-text">
-            <h5>
-              <strong>
-                <b>Description: </b>
-              </strong>
-              {snack.description}
-            </h5>
-            <h5>
-              <strong>
-                <b>Fiber (g): </b>
-              </strong>
-              {snack.fiber}
-            </h5>
-            <h5>
-              <strong>
-                <b>Protein (g): </b>
-              </strong>
-              {snack.protein}
-            </h5>
-            <h5>
-              <strong>
-                <b>Carbs (g): </b>
-              </strong>
-              {snack.carbs}
-            </h5>
-            <h5>
-              <strong>
-                <b>Added Sugar (g): </b>
-              </strong>
-              {snack.added_sugar}
-            </h5>
-            <h5>
-              <strong>
-                <b>Healthy: </b>
-              </strong>
-              {snack.is_healthy ? (
-                <img src={SolidHeart} alt="logo" height="25px" />
-              ) : (
-                <img src={EmptyHeart} alt="logo" height="25px" />
-              )}
-            </h5>
-          </div>
-        </div>
-        <div className="buttons">
-          <div>
-            <Link to={`/snacks`}>
-              <button className="navButtons">Back</button>
-            </Link>
-          </div>
-          <div>
-            <Link to={`/snacks/${id}/edit`}>
-              <button className="navButtons">Edit</button>
-            </Link>
-          </div>
-          <div>
-            <button className="navButtons" onClick={handleDelete}>
-              Delete
-            </button>
-          </div>
+    <div className="snack-info">
+      <h1>{snack.name}</h1>
+      <div className="snackInfo">
+        <img className="snack-img" src={snack.image} alt="snack-image" />
+        <div className="snack-text">
+          <h5>
+            <strong>
+              <b>Description: </b>
+            </strong>
+            {snack.description}
+          </h5>
+          <h5>
+            <strong>
+              <b>Fiber(g): </b>
+            </strong>
+            {snack.fiber}
+          </h5>
+          <h5>
+            <strong>
+              <b>Protein(g): </b>
+            </strong>
+            {snack.protein}
+          </h5>
+          <h5>
+            <strong>
+              <b>Carbs(g): </b>
+            </strong>
+            {snack.carbs}
+          </h5>
+          <h5>
+            <strong>
+              <b>Added Sugar(g): </b>
+            </strong>
+            {snack.added_sugar}
+          </h5>
+          <h5>
+            <strong>
+              <b>Healthy: </b>
+            </strong>
+            {snack.is_healthy ? (
+              <img src={SolidHeart} alt="logo" height="25px" />
+            ) : (
+              <img src={EmptyHeart} alt="logo" height="25px" />
+            )}
+          </h5>
         </div>
       </div>
-    </>
+      <div className="buttons">
+        <div>
+          <Link to={`/snacks`}>
+            <button className="navButtons">Back</button>
+          </Link>
+        </div>
+        <div>
+          <Link to={`/snacks/${id}/edit`}>
+            <button className="navButtons">Edit</button>
+          </Link>
+        </div>
+        <div>
+          <button className="navButtons" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
