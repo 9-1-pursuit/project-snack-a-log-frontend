@@ -14,7 +14,6 @@
   /* font-size: large; */
 }
 
-
 .dark {
   /* color: #fff; */
   color: rgb(239, 235, 235);
@@ -76,8 +75,77 @@ h5 {
   border-radius: 24px;
   background-color: lightsalmon;
   padding: 30px 30px 20px 30px;
+  overflow: scroll;
 }
 
 #home p #hint {
   color: #003873;
+}
+
+@media (max-width: 800px) {
+  #home {
+    all: unset;
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  #home img {
+    all: unset;
+    margin-top: 30px;
+    height: 350px;
+    margin-left: 20px;
+    border-radius: 20px;
+    border: 3px solid #2283e6;
+  }
+
+  #home p {
+    all: unset;
+    margin: 30px;
+    margin-left: 50px;
+    font-size: 20px;
+    border: 3px solid #2283e6;
+    width: 80%;
+    height: 100%;
+    border-radius: 24px;
+    background-color: lightsalmon;
+    padding: 30px 30px 20px 30px;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 360px) {
+  #home {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  #home img {
+    all: unset;
+    margin-top: 50px;
+    height: 300px;
+    border-radius: 20px;
+    border: 3px solid #2283e6;
+    padding: 5px;
+  }
+
+  #home p {
+    all: unset;
+    margin-top: 30px;
+    margin: 10px;
+    font-size: 20px;
+    border: 3px solid #2283e6;
+    height: 100%;
+    border-radius: 24px;
+    background-color: lightsalmon;
+    padding: 20px 20px 10px 20px;
+    overflow: scroll;
+  }
 }
