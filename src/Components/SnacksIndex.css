@@ -238,7 +238,7 @@ footer {
     /* max-height: 800px; */
     overflow-y: scroll;
     width: 100%;
-    padding: 10% 0;
+    padding: 5% 0;
   }
   .index .add-button {
     display: unset;

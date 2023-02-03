@@ -46,12 +46,29 @@ nav a img {
 
 @media (max-width: 360px) {
   nav {
-    background-color: purple;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .3fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
   }
-  nav a:nth-child(3),
+  nav a {
+    height: fit-content;
+    padding: 10px 0px;
+    width: fit-content;
+  }
+
+  nav a:first-child {
+    height: 40px;
+  }
+ button.toggleTheme{
+    height: fit-content;
+    align-self: center;
+    justify-self: center;
+    margin-top: 10px ;
+  
+  }
+  /* nav a:nth-child(3),
   nav a:nth-child(4) {
     display: none;
-  }
+  } */
 }
